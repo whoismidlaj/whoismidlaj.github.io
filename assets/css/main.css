@@ -27,19 +27,27 @@
     /* Navigation */
 
     .Navigation {
-      @apply fixed bottom-0 z-50 w-full py-3 md:py-5 border-t backdrop-blur border-gray-900/10 bg-gradient-to-tr from-gray-200/10 to-gray-300/10
+      @apply fixed bottom-3 z-50 w-full container left-1/2 -translate-x-1/2
     }
 
-    .light .Navigation {
-
+    .Navigation .NavContainer {
+      @apply py-2 px-2 md:py-2 border backdrop-blur bg-gradient-to-tr rounded-full;
     }
 
-    .dark .Navigation {
-      @apply border-gray-300/10 from-gray-800/10 to-gray-900/10
+    .light .Navigation .NavContainer {
+      @apply border-gray-100 from-gray-200 to-gray-300 bg-gray-100 border-gray-300;
     }
 
-    .matrix .Navigation {
-      @apply border-2 border-t-[#00FF41] from-black to-black backdrop-blur-none;
+    .dark .Navigation .NavContainer {
+      @apply border-gray-900/10 from-gray-200/10 to-gray-300/10 bg-gray-900 border-gray-300/10;
+    }
+
+    .matrix .Navigation .NavContainer {
+      @apply border-2 border-[#00FF41] from-black to-black backdrop-blur-none rounded-none;
+    }
+
+    .menuMobile {
+      @apply rounded-full
     }
 
     .menuMobile svg {
@@ -52,6 +60,10 @@
 
     .matrix .menuMobile svg {
       @apply text-[#00FF41] hover:text-black
+    }
+
+    .matrix .menuMobile:hover svg {
+      @apply text-black;
     }
 
     .menuContainer {
@@ -140,7 +152,7 @@
     /* Theme Toggle */
 
     .themeToggle a svg {
-      @apply w-6 h-6 text-gray-900;
+      @apply w-5 h-5 text-gray-900;
     }
 
     .dark .themeToggle a svg {
@@ -222,7 +234,7 @@
     /* Buttons */
 
     .btn {
-      @apply px-5 py-1 rounded-full font-normal border cursor-pointer;
+      @apply px-5 py-1 rounded-lg font-normal border cursor-pointer;
     }
 
     .matrix .btn {
@@ -230,7 +242,7 @@
     }
 
     .btn-primary {
-      @apply text-gray-900 bg-gray-300/10 border-gray-900/10;
+      @apply text-gray-900 bg-gray-300/10 border-gray-900/10 flex items-center;
     }
 
     .dark .btn-primary {
@@ -266,7 +278,7 @@
     }
 
     .icontext-btn {
-      @apply w-9 h-9 md:w-auto md:h-auto text-sm flex gap-2 justify-center items-center md:px-5 md:py-[6px] rounded-full font-normal border cursor-pointer text-gray-900 bg-gray-300/10 border-gray-900/10 hover:text-gray-900 hover:bg-gray-800/10 hover:border-gray-900/10
+      @apply w-9 h-9 md:w-auto md:h-auto text-sm flex gap-2 justify-center items-center md:px-5 md:py-[6px] rounded-lg font-normal border cursor-pointer text-gray-900 bg-gray-300/10 border-gray-900/10 hover:text-gray-900 hover:bg-gray-800/10 hover:border-gray-900/10
     }
 
     .dark .icontext-btn {

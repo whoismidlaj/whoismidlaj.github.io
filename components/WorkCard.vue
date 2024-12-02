@@ -1,9 +1,21 @@
 <script setup>
-import works from "~/content/data.json"
+import works from "~/content/data.json";
+import { computed } from "vue";
+
+// Define a `limit` prop
+const props = defineProps({
+  limit: {
+    type: Number,
+    default: works.length, // Default to show all works if no limit is provided
+  },
+});
+
+// Use a computed property to limit the works
+const limitedWorks = computed(() => works.slice(0, props.limit));
 </script>
 
 <template>
-    <div class="WorkCard flex flex-col justify-between" v-for="work in works" :key="work.id">
+    <div class="WorkCard flex flex-col justify-between" v-for="work in limitedWorks" :key="work.id">
         <div class="flex flex-col p-5 gap-2">
             <h3 class="text-xl">{{ work.name }}</h3>
             <p>{{ work.desc }}</p>

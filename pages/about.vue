@@ -27,7 +27,7 @@
         <hr class="divider">
         <div class="skills w-full">
             <h2 class="mb-4">Tools I Use</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="skill">
                     <IconHtml :fontControlled="false" />
                     <span>HTML5</span>

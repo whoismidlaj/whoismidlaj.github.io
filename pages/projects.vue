@@ -3,7 +3,7 @@
         <div class="w-full flex justify-start items-center mb-10">
             <h1 class="text-center">Projects</h1>
         </div>
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
+        <div class="w-full grid grid-cols-1 gap-4 justify-center">
             <WorkCard />
             
             <!-- Placeholder -->
