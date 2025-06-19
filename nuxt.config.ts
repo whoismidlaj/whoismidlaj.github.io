@@ -39,8 +39,8 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/color-mode', "nuxt-svgo"],
   colorMode: {
     classSuffix: '',
-    preference: 'matrix',
-    fallback: 'dark'
+    preference: 'dark',
+    fallback: 'light'
 },
 plugins: [
   '~/plugins/dateFormatter.js'
