@@ -1,7 +1,7 @@
 <template>
   <Preloader v-if="isLoading" />
   <div v-else class="min-h-screen">
-    <div v-show="colorMode.preference === 'dark'" class="fixed top-0 left-0 -z-10 w-full h-full opacity-30">
+    <div v-show="colorMode.preference === 'matrix'" class="fixed top-0 left-0 -z-10 w-full h-full opacity-30">
       <MatrixRain />
     </div>
     <TopBar/>
