@@ -108,10 +108,6 @@ const setTheme = (theme) => {
           class="underline underline-offset-2 text-[var(--accent-color)] hover:opacity-80 transition-opacity font-normal" @click="handleClick"
           to="/fediverse">Pixelfed posts</NuxtLink>
       </li>
-      <li class="text-sm">
-        <NuxtLink class="underline underline-offset-2 text-[var(--accent-color)] hover:opacity-80 transition-opacity font-normal" @click="handleClick"
-          to="/blog">Blog</NuxtLink> is under construction
-      </li>
     </ul>
     </div>
     <div class="p-3 border-t border-gray-900/10 dark:border-gray-300/10">
