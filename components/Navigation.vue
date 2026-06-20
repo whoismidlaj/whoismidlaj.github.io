@@ -28,6 +28,17 @@ function handleClick() {
   showPop.value = false
 }
 
+const route = useRoute()
+const activeIndex = computed(() => {
+  const path = route.path
+  if (path === '/') return 0
+  if (path.startsWith('/about')) return 1
+  if (path.startsWith('/projects')) return 2
+  if (path.startsWith('/fediverse')) return 3
+  return -1
+})
+
+const colorMode = useColorMode()
 const setTheme = (theme) => {
     colorMode.preference = theme;
 };
@@ -36,18 +47,31 @@ const setTheme = (theme) => {
 <template>
   <nav class="Navigation px-5">
     <div class="NavContainer container mx-auto flex justify-between">
-      <div class="menu hidden space-x-2 md:flex items-stretch">
-        <NuxtLink :class="{ 'btn-primary active': $route.path === '/' }" class="btn btn-primary rounded-full px-4" to="/" aria-label="Home">
+      <div class="menu hidden relative md:flex items-center gap-1">
+        <!-- Sliding active indicator matching tab style -->
+        <div class="absolute top-0 bottom-0 left-0 w-12 active-indicator rounded-full transition-all duration-300 ease-out"
+             :style="{ transform: `translateX(${activeIndex * 52}px)` }"
+             :class="{ 'opacity-0 scale-95': activeIndex === -1, 'opacity-100 scale-100': activeIndex !== -1 }"></div>
+        
+        <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
+                  to="/" aria-label="Home"
+                  :class="activeIndex === 0 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
           <Icon name="heroicons:home" class="w-5 h-5" />
         </NuxtLink>
-        <NuxtLink :class="{ 'btn-primary active': $route.path === '/about' }" class="btn btn-primary rounded-full px-4" to="/about" aria-label="About">
+        <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
+                  to="/about" aria-label="About"
+                  :class="activeIndex === 1 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
           <Icon name="heroicons:user" class="w-5 h-5" />
         </NuxtLink>
-        <NuxtLink :class="{ 'btn-primary active': $route.path === '/projects' }" class="btn btn-primary rounded-full px-4" to="/projects" aria-label="Projects">
+        <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
+                  to="/projects" aria-label="Projects"
+                  :class="activeIndex === 2 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
           <Icon name="heroicons:briefcase" class="w-5 h-5" />
         </NuxtLink>
-        <NuxtLink :class="{ 'btn-primary active': $route.path === '/fediverse' }" class="btn btn-primary rounded-full px-4" to="/fediverse" aria-label="Fediverse">
-          <Icon name="heroicons:camera" class="w-5 h-5" />
+        <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
+                  to="/fediverse" aria-label="Fediverse"
+                  :class="activeIndex === 3 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
+          <Icon name="heroicons:at-symbol" class="w-5 h-5" />
         </NuxtLink>
       </div>
       <div @click="toggleMenu" class="menuMobile flex justify-center items-center btn btn-primary p-2 rounded-full md:hidden">
@@ -57,7 +81,7 @@ const setTheme = (theme) => {
         </svg>
       </div>
 
-      <div @click="togglePop" class="menuMobile flex justify-center items-center btn btn-primary p-2 rounded-full">
+      <div @click="togglePop" class="theme-toggle-btn flex justify-center items-center p-2 rounded-full cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -67,26 +91,25 @@ const setTheme = (theme) => {
     </div>
   </nav>
   <MenuModal v-show="showMenuModal" />
-  <div v-if="showPop" @click="handleClick" class="fixed top-0 left-0 z-0 w-screen h-screen"></div>
+  <div v-if="showPop" @click="handleClick" class="fixed top-0 left-0 w-screen h-screen updates-backdrop"></div>
   <div v-show="showPop"
     class="fixed top-20 md:top-8 left-1/2 -translate-x-1/2 w-[calc(100%-2.5rem)] h-fit max-w-[400px] updates">
     <div class="p-5">
       <h2 class="text-md mb-4">Updates</h2>
     <ul class="list-decimal list-outside ps-5 flex flex-col gap-2">
-      <!-- <li class="text-sm">
-        <NuxtLink to="/guestbook">Guestbook</NuxtLink> is here, sign it now
-      </li> -->
 
+
+      <li class="text-sm">Claude-inspired warm design styling</li>
       <li class="text-sm">Projects page is live, checkout my recent <NuxtLink
-          class="underline underline-offset-2 text-gray-800 dark:text-gray-100 font-normal" @click="handleClick"
+          class="underline underline-offset-2 text-[var(--accent-color)] hover:opacity-80 transition-opacity font-normal" @click="handleClick"
           to="/projects">projects</NuxtLink>
       </li>
       <li class="text-sm">Fediverse feed is live, checkout my <NuxtLink
-          class="underline underline-offset-2 text-gray-800 dark:text-gray-100 font-normal" @click="handleClick"
+          class="underline underline-offset-2 text-[var(--accent-color)] hover:opacity-80 transition-opacity font-normal" @click="handleClick"
           to="/fediverse">Pixelfed posts</NuxtLink>
       </li>
       <li class="text-sm">
-        <NuxtLink class="underline underline-offset-2 text-gray-800 dark:text-gray-100 font-normal" @click="handleClick"
+        <NuxtLink class="underline underline-offset-2 text-[var(--accent-color)] hover:opacity-80 transition-opacity font-normal" @click="handleClick"
           to="/blog">Blog</NuxtLink> is under construction
       </li>
     </ul>

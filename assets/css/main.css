@@ -10,11 +10,10 @@
 
 
     .preloader {
-      @apply text-gray-900 bg-gradient-to-tr from-gray-200 to-gray-300
-    }
-
-    .dark .preloader {
-      @apply text-gray-300 from-gray-800 to-gray-900;
+      background-color: var(--bg-color) !important;
+      color: var(--text-main) !important;
+      background-image: none !important;
+      font-family: 'Newsreader', Georgia, Cambria, serif !important;
     }
 
 
@@ -27,15 +26,19 @@
     }
 
     .Navigation .NavContainer {
-      @apply py-2 px-2 md:py-2 border backdrop-blur bg-gradient-to-tr rounded-full;
+      @apply py-2 px-2 md:py-2 border backdrop-blur-md bg-gradient-to-tr rounded-full;
     }
 
     .light .Navigation .NavContainer {
-      @apply border-gray-100 from-gray-200 to-gray-300 bg-gray-100 border-gray-300;
+      background-color: rgba(250, 248, 245, 0.96) !important;
+      border-color: var(--border-color) !important;
+      background-image: none !important;
     }
 
     .dark .Navigation .NavContainer {
-      @apply border-gray-900/10 from-gray-200/10 to-gray-300/10 bg-gray-900 border-gray-300/10;
+      background-color: rgba(25, 24, 22, 0.98) !important;
+      border-color: var(--border-color) !important;
+      background-image: none !important;
     }
 
 
@@ -93,11 +96,15 @@
     /* Topbar */
 
     .updates {
-      @apply border rounded-xl backdrop-blur border-gray-900/10 bg-gradient-to-tr from-gray-200/50 to-gray-300/50
+      @apply border rounded-xl backdrop-blur-md;
+      background-color: var(--card-bg) !important;
+      border-color: var(--border-color) !important;
+      background-image: none !important;
+      z-index: 999 !important;
     }
 
-    .dark .updates {
-      @apply border-gray-300/10 from-gray-800/50 to-gray-900/50
+    .updates-backdrop {
+      z-index: 998 !important;
     }
 
 
@@ -105,32 +112,118 @@
 
 
 
-    /* Themes */
+    /* Themes (Defaulting to Warm Claude Aesthetic) */
+    :root {
+      --bg-color: #FAF8F5;
+      --text-main: #382F2D;
+      --text-muted: #514441;
+      --text-header: #191919;
+      --border-color: #E2D9CB;
+      --border-light: rgba(226, 217, 203, 0.4);
+      --card-bg: rgba(255, 255, 255, 0.55);
+      --card-details-bg: rgba(244, 239, 230, 0.55);
+      --button-bg: #F4EFE6;
+      --button-hover: #ECE5D8;
+      --accent-color: #8A3D27;
+      --accent-light: rgba(138, 61, 39, 0.12);
+      --accent-border: rgba(138, 61, 39, 0.25);
+    }
+
+    .dark {
+      --bg-color: #191816;
+      --text-main: #E6DFD5;
+      --text-muted: #BEB6A8;
+      --text-header: #F5EFE6;
+      --border-color: #2E2C29;
+      --border-light: rgba(46, 44, 41, 0.4);
+      --card-bg: rgba(34, 32, 29, 0.55);
+      --card-details-bg: rgba(46, 44, 41, 0.55);
+      --button-bg: #22201D;
+      --button-hover: #2A2824;
+      --accent-color: #D97753;
+      --accent-light: rgba(217, 119, 83, 0.18);
+      --accent-border: rgba(217, 119, 83, 0.35);
+    }
 
     body {
-      @apply bg-gray-300 text-gray-900  bg-gradient-to-tr from-gray-200 to-gray-300 
+      background-color: var(--bg-color);
+      color: var(--text-main);
     }
 
-    .dark body {
-      @apply bg-gray-900 text-gray-300 from-gray-800 to-gray-900
+    .active-indicator {
+      background-color: var(--accent-light) !important;
+      border-color: var(--accent-border) !important;
+    }
+
+    /* Target various gray/border layout colors to use the new warm palette */
+    .border-gray-900\/10, .border-gray-300\/10, .border-gray-400\/20, .border-gray-400\/15,
+    .border-gray-800, .border-gray-200, .border-gray-100, .border-gray-300 {
+      border-color: var(--border-color) !important;
+    }
+
+    .bg-gray-300\/30, .bg-gray-800, .bg-gray-800\/50, .bg-white\/40, .bg-gray-950\/40 {
+      background-color: var(--card-bg) !important;
+    }
+
+    .divider {
+      background-color: var(--border-color) !important;
     }
 
 
 
     /* Theme Toggle */
-
-    .themeToggle a svg {
-      @apply w-5 h-5 text-gray-900;
-    }
-
-    .dark .themeToggle a svg {
-      @apply text-gray-200
+    .theme-switcher-container {
+      position: relative;
+      display: flex !important;
+      flex-direction: row !important;
+      padding: 4px !important;
+      background-color: var(--card-details-bg) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 9999px !important;
+      width: 100% !important;
+      max-width: 240px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
     
 
 
     .Profile {
-      @apply w-28 h-28 mb-8 bg-gray-100 border-2 border-gray-100 rounded-full
+      @apply w-28 h-28 mb-8 rounded-full object-cover;
+      background-color: var(--accent-light) !important;
+      border: 2px solid var(--accent-color) !important;
+    }
+
+    .dark .Profile {
+      background-color: var(--text-muted) !important;
+    }
+
+    .TopBarProfile {
+      @apply w-10 h-10 rounded-full object-cover;
+      background-color: var(--accent-light) !important;
+      border: 1px solid var(--accent-color) !important;
+    }
+
+    .dark .TopBarProfile {
+      background-color: var(--text-muted) !important;
+    }
+
+    .theme-toggle-btn {
+      @apply border transition-all duration-300;
+      background-color: var(--button-bg) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-main) !important;
+    }
+
+    .theme-toggle-btn:hover {
+      background-color: var(--button-hover) !important;
+      color: var(--accent-color) !important;
+      border-color: var(--accent-color) !important;
+      transform: scale(1.03);
+    }
+    
+    .theme-toggle-btn svg {
+      @apply w-6 h-6;
     }
 
 
@@ -160,86 +253,90 @@
 
     /* Typography */
 
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Newsreader', Georgia, Cambria, serif !important;
+      color: var(--text-header) !important;
+    }
+
     h1 {
-      @apply font-sans text-4xl md:text-5xl font-normal text-gray-900 dark:text-gray-100;
+      @apply text-4xl md:text-5xl font-normal;
     }
-
-    .dark h1 {
-      @apply text-gray-100;
-    }
-
-
 
     h2 {
-      @apply font-sans font-normal text-2xl text-gray-900 dark:text-gray-100;
+      @apply font-normal text-2xl;
     }
     
     h3 {
-      @apply text-xl text-gray-900 dark:text-gray-100;
+      @apply text-xl;
     }
     
     p,li {
-      @apply text-base font-normal text-gray-600 dark:text-gray-100/60;
+      @apply text-base font-normal;
+      color: var(--text-muted) !important;
     }
 
 
     /* Buttons */
 
     .btn {
-      @apply px-5 py-1 rounded-lg font-normal border cursor-pointer;
+      @apply px-5 py-1 rounded-lg font-normal border cursor-pointer backdrop-blur-md transition-all duration-300;
     }
 
-
-
     .btn-primary {
-      @apply text-gray-900 bg-gray-300/10 border-gray-900/10 flex items-center;
+      @apply flex items-center;
+      background-color: rgba(255, 255, 255, 0.4) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-main) !important;
     }
 
     .dark .btn-primary {
-      @apply text-gray-200 bg-gray-800/10 border-gray-300/10;
+      background-color: rgba(34, 32, 29, 0.4) !important;
     }
 
-
-
     .btn-primary.active, .btn-primary:hover {
-      @apply text-gray-900 bg-gray-800/10 border-gray-900/10;
+      background-color: rgba(255, 255, 255, 0.6) !important;
+      color: var(--text-header) !important;
     }
 
     .dark .btn-primary.active, .dark .btn-primary:hover {
-      @apply text-gray-300 bg-gray-100/10 border-gray-300/10;
+      background-color: rgba(34, 32, 29, 0.6) !important;
+      color: var(--text-header) !important;
     }
-
-
 
     .icon-btn {
-      @apply h-10 w-10 p-2 rounded-full bg-gray-900 hover:bg-gray-800 cursor-pointer;
+      @apply h-10 w-10 p-2 rounded-full cursor-pointer;
+      background-color: var(--button-bg) !important;
+      color: var(--text-main) !important;
     }
 
-    .dark .icon-btn {
-      @apply bg-gray-700/50 hover:bg-gray-700;
+    .icon-btn:hover {
+      background-color: var(--button-hover) !important;
     }
-
-
 
     .icontext-btn {
-      @apply w-9 h-9 md:w-auto md:h-auto text-sm flex gap-2 justify-center items-center md:px-5 md:py-[6px] rounded-lg font-normal border cursor-pointer text-gray-900 bg-gray-300/10 border-gray-900/10 hover:text-gray-900 hover:bg-gray-800/10 hover:border-gray-900/10
+      @apply w-9 h-9 md:w-auto md:h-auto text-sm flex gap-2 justify-center items-center md:px-5 md:py-[6px] rounded-lg font-normal border cursor-pointer;
+      background-color: var(--button-bg) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-main) !important;
     }
 
-    .dark .icontext-btn {
-      @apply text-gray-200 bg-gray-800/10 border-gray-300/10 hover:text-gray-300 hover:bg-gray-100/10 hover:border-gray-300/10
+    .icontext-btn:hover {
+      background-color: var(--button-hover) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-header) !important;
     }
-
-
 
     .skill {
-      @apply bg-gray-300/30 text-gray-900 p-4 rounded-lg flex justify-between items-center gap-4 border border-gray-900/10;
+      @apply p-2.5 px-3 rounded-xl flex justify-start items-center gap-3 border transition-all duration-300;
+      background-color: var(--card-bg) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-main) !important;
     }
-
-    .dark .skill {
-      @apply bg-gray-800 text-gray-300 border-gray-300/10;
+    .skill:hover {
+      background-color: var(--card-details-bg) !important;
+      border-color: var(--accent-color) !important;
+      transform: translateY(-1px);
     }
-
-
 
     .skill svg {
       @apply h-8
@@ -249,72 +346,47 @@
       fill: revert-layer;
     }
 
-
-
     .technology-icon svg {
-      @apply text-[#00FF41]
+      color: var(--accent-color) !important;
     }
-
 
     /* Experience */
 
     .experience-item {
-      @apply flex justify-between items-end p-5 border rounded-xl bg-gray-300/30 border-gray-900/10
+      @apply flex justify-between items-end p-5 border rounded-xl;
+      background-color: var(--card-bg) !important;
+      border-color: var(--border-color) !important;
     }
-
-    .dark .experience-item {
-      @apply bg-gray-800/50 border-gray-300/10
-    }
-
-
 
     .exp-year {
-      @apply text-sm px-5 py-1 rounded-full border text-gray-900 bg-gray-300/30 border-gray-900/10
+      @apply text-sm px-5 py-1 rounded-full border;
+      background-color: var(--button-bg) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-main) !important;
     }
-    
-    .dark .exp-year {
-      @apply text-gray-200 bg-gray-800 border-gray-300/10;
-    }
-  
-
 
     .WorkCard {
-      @apply border rounded-xl overflow-hidden bg-gray-300/30 border-gray-900/10
-    }
-
-    .dark .WorkCard {
-      @apply bg-gray-800/50 border-gray-300/10
+      @apply border rounded-xl overflow-hidden;
+      background-color: var(--card-bg) !important;
+      border-color: var(--border-color) !important;
     }
 
 
 
     .WorkDetails {
-      @apply border-t bg-gray-300/30 dark:bg-gray-800 border-gray-900/10 dark:border-gray-300/10
+      @apply border-t;
+      background-color: var(--card-details-bg) !important;
+      border-color: var(--border-color) !important;
     }
 
-    .dark .WorkDetails {
-      @apply bg-gray-800 border-gray-300/10
-    }
-
-
-   
     .blog-item {
-      @apply border rounded-xl overflow-clip border-gray-900/10 border-gray-300/10;
+      @apply border rounded-xl overflow-clip;
+      border-color: var(--border-color) !important;
     }
-    
-    .dark .blog-item {
-      @apply border-gray-300/10;
-    }
-
-
 
     .blog-details {
-      @apply border-t bg-gray-300/30 border-gray-900/10 py-2 px-5 rounded-b-xl
+      @apply border-t py-2 px-5 rounded-b-xl;
+      background-color: var(--card-details-bg) !important;
+      border-color: var(--border-color) !important;
     }
-
-    .dark .blog-details {
-      @apply bg-gray-800 border-gray-300/10
-    }
-
-
   }
