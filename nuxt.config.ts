@@ -1,12 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  runtimeConfig: {
-    public: {
-      wpApiBaseUrl: process.env.WP_API_BASE_URL,
-      supabaseUrl: process.env.SUPABASE_URL,
-      supabaseKey: process.env.SUPABASE_KEY,
-    }
-  },
   ssr: true,
   devtools: { enabled: false },
   app: {
