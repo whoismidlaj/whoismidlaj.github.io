@@ -20,13 +20,13 @@ const limitedWorks = computed(() => works.slice(0, props.limit));
             <h3 class="text-xl">{{ work.name }}</h3>
             <p>{{ work.desc }}</p>
         </div>
-        <div class="px-5 py-3 flex justify-between WorkDetails">
-            <div class="flex items-center gap-4">
+        <div class="px-5 py-3 flex justify-between items-center gap-4 WorkDetails">
+            <div class="flex flex-wrap items-center gap-3 min-w-0">
                 <div v-for="tech in work.tech" :key="tech" class="technology-icon">
                     <Icon :name="techIcons[tech]" class="w-5 h-5" />
                 </div>
             </div>
-            <div class="flex gap-2">
+            <div class="flex gap-2 shrink-0">
                 <a v-if="work.git"  :href="`${ work.git }`" target="_blank" class="icontext-btn">
                     <span class="hidden md:block">Source</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
