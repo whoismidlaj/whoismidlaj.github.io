@@ -181,7 +181,7 @@
         </div>
         <div v-else class="max-w-2xl mx-auto space-y-6">
           <article v-for="post in mastodonFeed.posts" :key="post.id" 
-                   class="border border-gray-400/15 dark:border-gray-800 rounded-xl p-5 md:p-6 bg-white dark:bg-gray-950 shadow-sm hover:border-gray-450 dark:hover:border-gray-700/80 transition-colors">
+                   class="border border-[var(--border-color)] rounded-xl p-5 md:p-6 bg-[var(--card-bg)] shadow-sm hover:border-gray-450 dark:hover:border-gray-700/80 transition-colors">
             
             <!-- Author row -->
             <div class="flex items-center justify-between mb-4">
@@ -237,14 +237,14 @@
                 leave-active-class="transition duration-200 ease-in"
                 leave-from-class="opacity-100 scale-100"
                 leave-to-class="opacity-0 scale-95">
-      <div v-if="selectedPost" class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10 bg-black/95"
+      <div v-if="selectedPost" class="fixed inset-0 z-[1000] flex items-center justify-center p-4 md:p-10 bg-black/95"
            @click.self="closePost">
         
-        <button class="absolute top-4 right-4 text-white/70 hover:text-white p-2 z-50 transition-colors" @click="closePost">
+        <button class="absolute top-4 right-4 text-white/70 hover:text-white p-2 z-[1001] transition-colors" @click="closePost">
           <Icon name="heroicons:x-mark" class="w-8 h-8" />
         </button>
 
-        <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden w-full max-w-5xl max-h-[90vh] md:max-h-[80vh] flex flex-col md:flex-row shadow-2xl border border-gray-200/10">
+        <div class="bg-[var(--bg-color)] rounded-xl overflow-hidden w-full max-w-5xl max-h-[90vh] md:max-h-[80vh] flex flex-col md:flex-row shadow-2xl border border-[var(--border-color)]">
           <!-- Left: Image Slider -->
           <div class="relative flex-1 bg-black flex items-center justify-center min-h-[300px] md:min-h-0 aspect-square md:aspect-auto">
             <img :src="selectedPost.media[activeImageIndex]" :alt="selectedPost.caption || 'Pixelfed post'" class="w-full h-full object-contain max-h-[50vh] md:max-h-[80vh]" />
@@ -270,7 +270,7 @@
           </div>
 
           <!-- Right: Sidebar details -->
-          <div class="w-full md:w-[380px] flex flex-col justify-between border-t md:border-t-0 md:border-l border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950 p-6">
+          <div class="w-full md:w-[380px] flex flex-col justify-between border-t md:border-t-0 md:border-l border-[var(--border-color)] bg-[var(--bg-color)] p-6">
             <div class="overflow-y-auto max-h-[35vh] md:max-h-[60vh] space-y-4">
               <!-- Account info -->
               <div class="flex items-center gap-3">
@@ -315,7 +315,7 @@
                 leave-active-class="transition duration-200 ease-in"
                 leave-from-class="opacity-100 scale-100"
                 leave-to-class="opacity-0 scale-95">
-      <div v-if="mastodonLightboxMedia" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95"
+      <div v-if="mastodonLightboxMedia" class="fixed inset-0 z-[1000] flex items-center justify-center p-4 bg-black/95"
            @click.self="closeMastodonMedia">
         
         <button class="absolute top-4 right-4 text-white/70 hover:text-white p-2 z-50" @click="closeMastodonMedia">
@@ -346,9 +346,9 @@
 <script setup lang="ts">
 const activeTab = ref('pixelfed')
 
-// Fetch Pixelfed & Mastodon feeds
-const { data: pixelfedFeed, pending: pixelfedPending, error: pixelfedError } = await useFetch<any>('/api/pixelfed')
-const { data: mastodonFeed, pending: mastodonPending, error: mastodonError } = await useFetch<any>('/api/mastodon')
+// Fetch Pixelfed & Mastodon feeds asynchronously to avoid SSR blocking
+const { data: pixelfedFeed, pending: pixelfedPending, error: pixelfedError } = useLazyFetch<any>('/api/pixelfed')
+const { data: mastodonFeed, pending: mastodonPending, error: mastodonError } = useLazyFetch<any>('/api/mastodon')
 
 // Pixelfed Modal State
 const selectedPost = ref<any>(null)
