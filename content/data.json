@@ -1,6 +1,34 @@
 [
     {
         "id": 1,
+        "name": "ListenLoop",
+        "git": "https://github.com/whoismidlaj/listenloop2",
+        "link": "https://listenloop.onlyfrens.in",
+        "tech": [
+            "react",
+            "fastapi",
+            "tailwindcss",
+            "mongodb",
+            "websocket",
+            "supabase"
+        ],
+        "desc": "A real-time mobile-first social listening platform. Join rooms, listen to synced YouTube music, chat, react with floating emojis, and vote on the queue together."
+    },
+    {
+        "id": 3,
+        "name": "Time Tracker",
+        "git": "https://github.com/whoismidlaj/time-tracker",
+        "link": "https://timetracker.onlyfrens.fun/",
+        "tech": [
+            "nextjs",
+            "postgresql",
+            "nextauth",
+            "tailwindcss"
+        ],
+        "desc": "A distraction-free tool designed to help you manage your office hours effortlessly. It tracks work sessions, manages breaks, and calculates when you can head home."
+    },
+    {
+        "id": 3,
         "name": "This Portfolio",
         "git": "https://github.com/whoismidlaj/portfolio",
         "link": "",
@@ -10,48 +38,5 @@
             "tailwindcss"
         ],
         "desc": "My latest portfolio, which you are currently viewing, is built using Nuxt.js and Tailwind CSS."
-    },
-    {
-        "id": 2,
-        "name": "QuickNote",
-        "git": "https://github.com/whoismidlaj/QuickNote.vue",
-        "link": "https://quick-note-vue.vercel.app/",
-        "tech": [
-            "vuejs",
-            "tailwindcss"
-        ],
-        "desc": "Note-taking web app made with Vue.js, later enhanced with Capacitor.js for an Android app."
-    },
-    {
-        "id": 3,
-        "name": "Pocket",
-        "git": "https://github.com/whoismidlaj/Pocket.vue",
-        "link": "https://pocket-vue.vercel.app/",
-        "tech": [
-            "vuejs"
-        ],
-        "desc": "Expense tracker web app made with Vue.js as a learning project, following a YouTube video tutorial."
-    },
-    {
-        "id": 4,
-        "name": "DevFolio",
-        "git": "https://github.com/whoismidlaj/dev-folio",
-        "link": "https://dev-folio-pied.vercel.app/",
-        "tech": [
-            "vuejs",
-            "tailwindcss"
-        ],
-        "desc": "Portfolio template powered by Vue.js and TailwindCSS."
-    },
-    {
-        "id": 5,
-        "name": "Alrayah Tourism",
-        "link": "https://alrayahtourism.in/en/",
-        "tech": [
-            "wordpress",
-            "php",
-            "bootstrap"
-        ],
-        "desc": "Website for Alrayah Tourism, built using Wordpress. used bootstrap for styling and layouts."
     }
 ]

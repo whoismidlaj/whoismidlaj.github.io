@@ -17,6 +17,11 @@
                         <Icon name="heroicons:briefcase" class="w-6 h-6" />
                     </div>
                 </NuxtLink>
+                <NuxtLink @click="handleClick" :class="{'active': $route.path === '/fediverse'}" class="menuItem" to="/fediverse">Fediverse 
+                    <div class="icon w-6">
+                        <Icon name="heroicons:camera" class="w-6 h-6" />
+                    </div>
+                </NuxtLink>
             </div>
         </div>
     </div>

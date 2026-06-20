@@ -46,7 +46,9 @@ const setTheme = (theme) => {
         <NuxtLink :class="{ 'btn-primary active': $route.path === '/projects' }" class="btn btn-primary rounded-full px-4" to="/projects" aria-label="Projects">
           <Icon name="heroicons:briefcase" class="w-5 h-5" />
         </NuxtLink>
-        <!-- <NuxtLink :class="{'btn-primary active': $route.path === '/photodump'}" class="btn btn-primary" to="/photodump">Photos</NuxtLink> -->
+        <NuxtLink :class="{ 'btn-primary active': $route.path === '/fediverse' }" class="btn btn-primary rounded-full px-4" to="/fediverse" aria-label="Fediverse">
+          <Icon name="heroicons:camera" class="w-5 h-5" />
+        </NuxtLink>
       </div>
       <div @click="toggleMenu" class="menuMobile flex justify-center items-center btn btn-primary p-2 rounded-full md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -78,6 +80,10 @@ const setTheme = (theme) => {
       <li class="text-sm">Projects page is live, checkout my recent <NuxtLink
           class="underline underline-offset-2 text-gray-800 dark:text-gray-100 font-normal" @click="handleClick"
           to="/projects">projects</NuxtLink>
+      </li>
+      <li class="text-sm">Fediverse feed is live, checkout my <NuxtLink
+          class="underline underline-offset-2 text-gray-800 dark:text-gray-100 font-normal" @click="handleClick"
+          to="/fediverse">Pixelfed posts</NuxtLink>
       </li>
       <li class="text-sm">
         <NuxtLink class="underline underline-offset-2 text-gray-800 dark:text-gray-100 font-normal" @click="handleClick"
