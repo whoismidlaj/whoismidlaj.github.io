@@ -29,39 +29,39 @@
             <h2 class="mb-4">Tools I Use</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="skill">
-                    <IconHtml :fontControlled="false" />
+                    <Icon name="logos:html-5" class="w-8 h-8" />
                     <span>HTML5</span>
                 </div>
                 <div class="skill">
-                    <IconCss :fontControlled="false" />
+                    <Icon name="logos:css-3" class="w-8 h-8" />
                     <span>CSS3</span>
                 </div>
                 <div class="skill">
-                    <IconJs :fontControlled="false" />
+                    <Icon name="logos:javascript" class="w-8 h-8" />
                     <span>JavaScript</span>
                 </div>
                 <div class="skill">
-                    <IconNuxt :fontControlled="false" />
+                    <Icon name="logos:nuxt-icon" class="w-8 h-8" />
                     <span>Nuxt.js</span>
                 </div>
                 <div class="skill">
-                    <IconVue :fontControlled="false" />
+                    <Icon name="logos:vue" class="w-8 h-8" />
                     <span>Vue.js</span>
                 </div>
                 <div class="skill">
-                    <IconTailwind class="text-red" :fontControlled="false" />
+                    <Icon name="logos:tailwindcss-icon" class="w-8 h-8" />
                     <span>TailwindCSS</span>
                 </div>
                 <div class="skill">
-                    <IconWordpress :fontControlled="false" />
+                    <Icon name="logos:wordpress-icon" class="w-8 h-8" />
                     <span>WordPress</span>
                 </div>
                 <div class="skill">
-                    <IconPhp :fontControlled="false" />
+                    <Icon name="logos:php" class="w-8 h-8" />
                     <span>PHP</span>
                 </div>
                 <div class="skill">
-                    <IconFigma :fontControlled="false" />
+                    <Icon name="logos:figma" class="w-8 h-8" />
                     <span>Figma</span>
                 </div>
                 <div class="skill justify-end">
@@ -73,22 +73,13 @@
         <h2 class="mt-4 mb-4">About this site</h2>
         <ul class="credits list-none flex flex-col gap-2">
             <li class="">Hosted on <a href="https://onlyfrens.in">onlyfrens</a></li>
-            <li class="flex items-center flex-wrap">Powered by <IconNuxt class="w-5 mx-2" /> Nuxt.js and <IconTailwind class="w-5 mx-2" /> TailwindCSS</li>
+            <li class="flex items-center flex-wrap">Powered by <Icon name="logos:nuxt-icon" class="w-5 h-5 mx-2" /> Nuxt.js and <Icon name="logos:tailwindcss-icon" class="w-5 h-5 mx-2" /> TailwindCSS</li>
         </ul>
     </div>
 </template>
 
 <script setup>
-import IconHtml from '~/assets/img/skill/html5.svg'
-import IconCss from '~/assets/img/skill/css3.svg'
-import IconJs from '~/assets/img/skill/javascript.svg'
-import IconNuxt from '~/assets/img/skill/nuxtdotjs.svg'
-import IconVue from '~/assets/img/skill/vuedotjs.svg'
-import IconTailwind from '~/assets/img/skill/tailwindcss.svg'
-import IconWordpress from '~/assets/img/skill/wordpress.svg'
-import IconPhp from '~/assets/img/skill/php.svg'
-import IconFigma from '~/assets/img/skill/figma.svg'
-import IconCloudflare from '~/assets/img/icons/cloudflarepages.svg'
+
 
 
 </script>

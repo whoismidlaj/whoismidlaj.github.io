@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
       {
-        name: 'nuxtfolio',
+        name: 'portfolio',
         port: '3000',
         exec_mode: 'cluster',
         instances: 'max',

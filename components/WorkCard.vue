@@ -23,7 +23,7 @@ const limitedWorks = computed(() => works.slice(0, props.limit));
         <div class="px-5 py-3 flex justify-between WorkDetails">
             <div class="flex items-center gap-4">
                 <div v-for="tech in work.tech" :key="tech" class="technology-icon">
-                    <component :is="techIcons[tech]" class="w-5 h-5" />
+                    <Icon :name="techIcons[tech]" class="w-5 h-5" />
                 </div>
             </div>
             <div class="flex gap-2">

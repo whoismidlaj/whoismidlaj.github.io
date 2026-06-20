@@ -20,7 +20,7 @@ export default defineNuxtConfig({
       //   }
       // ],
       link: [
-        { rel: 'stylesheet', href: 'https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap' }, 
+        { rel: 'stylesheet', href: 'https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap' },
@@ -36,13 +36,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@nuxtjs/color-mode', "nuxt-svgo"],
+  modules: ['@nuxtjs/color-mode', "@nuxt/icon", "@nuxt/content"],
+  compatibilityDate: '2026-01-30',
   colorMode: {
     classSuffix: '',
     preference: 'dark',
     fallback: 'light'
-},
-plugins: [
-  '~/plugins/dateFormatter.js'
-]
+  },
+  plugins: [
+    '~/plugins/dateFormatter.js'
+  ]
 })

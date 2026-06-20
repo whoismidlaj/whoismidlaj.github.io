@@ -37,11 +37,15 @@ const setTheme = (theme) => {
   <nav class="Navigation px-5">
     <div class="NavContainer container mx-auto flex justify-between">
       <div class="menu hidden space-x-2 md:flex items-stretch">
-        <NuxtLink :class="{ 'btn-primary active': $route.path === '/' }" class="btn btn-primary rounded-full" to="/">Home</NuxtLink>
-        <NuxtLink :class="{ 'btn-primary active': $route.path === '/about' }" class="btn btn-primary rounded-full" to="/about">About
+        <NuxtLink :class="{ 'btn-primary active': $route.path === '/' }" class="btn btn-primary rounded-full px-4" to="/" aria-label="Home">
+          <Icon name="heroicons:home" class="w-5 h-5" />
         </NuxtLink>
-        <NuxtLink :class="{ 'btn-primary active': $route.path === '/projects' }" class="btn btn-primary rounded-full" to="/projects">
-          Projects</NuxtLink>
+        <NuxtLink :class="{ 'btn-primary active': $route.path === '/about' }" class="btn btn-primary rounded-full px-4" to="/about" aria-label="About">
+          <Icon name="heroicons:user" class="w-5 h-5" />
+        </NuxtLink>
+        <NuxtLink :class="{ 'btn-primary active': $route.path === '/projects' }" class="btn btn-primary rounded-full px-4" to="/projects" aria-label="Projects">
+          <Icon name="heroicons:briefcase" class="w-5 h-5" />
+        </NuxtLink>
         <!-- <NuxtLink :class="{'btn-primary active': $route.path === '/photodump'}" class="btn btn-primary" to="/photodump">Photos</NuxtLink> -->
       </div>
       <div @click="toggleMenu" class="menuMobile flex justify-center items-center btn btn-primary p-2 rounded-full md:hidden">
@@ -70,8 +74,7 @@ const setTheme = (theme) => {
       <!-- <li class="text-sm">
         <NuxtLink to="/guestbook">Guestbook</NuxtLink> is here, sign it now
       </li> -->
-      <li class="text-sm">Added <a @click="setTheme('matrix')"
-          class="underline underline-offset-2 text-gray-800 dark:text-gray-100 font-normal">matrix</a> theme</li>
+
       <li class="text-sm">Projects page is live, checkout my recent <NuxtLink
           class="underline underline-offset-2 text-gray-800 dark:text-gray-100 font-normal" @click="handleClick"
           to="/projects">projects</NuxtLink>
@@ -82,7 +85,7 @@ const setTheme = (theme) => {
       </li>
     </ul>
     </div>
-    <div class="p-3 border-t matrix:border-t-2 border-gray-900/10 dark:border-gray-300/10">
+    <div class="p-3 border-t border-gray-900/10 dark:border-gray-300/10">
       <DarkModeToggle />
     </div>
   </div>
