@@ -28,7 +28,7 @@
               enter-from-class="transform scale-95 opacity-0" enter-to-class="transform scale-100 opacity-100"
               leave-active-class="transition duration-200 ease-in" leave-from-class="transform scale-100 opacity-100"
               leave-to-class="transform scale-95 opacity-0">
-              <div v-if="selectedPhoto" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+              <div v-if="selectedPhoto" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90"
                   @click.self="closeModal">
                   <button class="absolute top-6 right-6 text-white/70 hover:text-white p-2" @click="closeModal">
                       <Icon name="heroicons:x-mark" class="w-10 h-10" />

@@ -26,17 +26,17 @@
     }
 
     .Navigation .NavContainer {
-      @apply py-2 px-2 md:py-2 border backdrop-blur-md bg-gradient-to-tr rounded-full;
+      @apply py-2 px-2 md:py-2 border bg-gradient-to-tr rounded-full;
     }
 
     .light .Navigation .NavContainer {
-      background-color: rgba(250, 248, 245, 0.96) !important;
+      background-color: var(--bg-color) !important;
       border-color: var(--border-color) !important;
       background-image: none !important;
     }
 
     .dark .Navigation .NavContainer {
-      background-color: rgba(25, 24, 22, 0.98) !important;
+      background-color: var(--bg-color) !important;
       border-color: var(--border-color) !important;
       background-image: none !important;
     }
@@ -44,15 +44,21 @@
 
 
     .menuMobile {
-      @apply rounded-full
+      @apply w-10 h-10 border flex justify-center items-center rounded-full transition-all duration-300;
+      background-color: var(--button-bg) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-main) !important;
+    }
+
+    .menuMobile:hover {
+      background-color: var(--button-hover) !important;
+      color: var(--accent-color) !important;
+      border-color: var(--accent-color) !important;
+      transform: scale(1.03);
     }
 
     .menuMobile svg {
-      @apply w-6 h-6 text-gray-900;
-    }
-
-    .dark .menuMobile svg {
-      @apply text-gray-200
+      @apply w-5 h-5;
     }
 
 
@@ -60,11 +66,15 @@
 
 
     .menuContainer {
-      @apply bg-gray-300/10 dark:bg-gray-700/10 backdrop-blur border border-gray-900/10 dark:border-gray-300/10 rounded-xl 
+      @apply border rounded-xl;
+      background-color: var(--bg-color) !important;
+      border-color: var(--border-color) !important;
+      background-image: none !important;
     }
 
     .dark .menuContainer {
-      @apply bg-gray-700/10 border-gray-300/10
+      background-color: var(--bg-color) !important;
+      border-color: var(--border-color) !important;
     }
 
 
@@ -76,19 +86,16 @@
 
 
     .menuItem {
-      @apply px-5 py-4 border-gray-900/10 flex justify-between items-center
+      @apply px-5 py-3 border-gray-900/10 flex justify-between items-center
     }
 
     .menuItem.active {
-      @apply bg-gray-300/10
+      background-color: var(--accent-light) !important;
+      color: var(--accent-color) !important;
     }
 
     .dark .menuItem {
       @apply border-gray-300/10
-    }
-
-    .dark .menuItem.active {
-      @apply bg-gray-500/30
     }
     
 
@@ -96,14 +103,15 @@
     /* Topbar */
 
     .updates {
-      @apply border rounded-xl backdrop-blur-md;
-      background-color: var(--card-bg) !important;
+      @apply border rounded-xl;
+      background-color: var(--bg-color) !important;
       border-color: var(--border-color) !important;
       background-image: none !important;
       z-index: 999 !important;
     }
 
     .updates-backdrop {
+      background-color: rgba(0, 0, 0, 0.4) !important;
       z-index: 998 !important;
     }
 
@@ -209,7 +217,7 @@
     }
 
     .theme-toggle-btn {
-      @apply border transition-all duration-300;
+      @apply w-10 h-10 border flex justify-center items-center rounded-full transition-all duration-300;
       background-color: var(--button-bg) !important;
       border-color: var(--border-color) !important;
       color: var(--text-main) !important;
@@ -223,7 +231,7 @@
     }
     
     .theme-toggle-btn svg {
-      @apply w-6 h-6;
+      @apply w-5 h-5;
     }
 
 
@@ -279,7 +287,7 @@
     /* Buttons */
 
     .btn {
-      @apply px-5 py-1 rounded-lg font-normal border cursor-pointer backdrop-blur-md transition-all duration-300;
+      @apply px-5 py-1 rounded-lg font-normal border cursor-pointer transition-all duration-300;
     }
 
     .btn-primary {

@@ -38,7 +38,7 @@
       <!-- Pixelfed Header -->
       <header v-if="activeTab === 'pixelfed' && !pixelfedError && pixelfedFeed && !pixelfedFeed.error" 
               class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 pb-12 border-b border-gray-400/20 dark:border-gray-800 mb-8">
-        <div class="w-24 h-24 md:w-28 md:h-28 border border-gray-300/80 dark:border-gray-300/10 rounded-full p-1 bg-white/40 dark:bg-gray-950/40 backdrop-blur-md">
+        <div class="w-24 h-24 md:w-28 md:h-28 border border-gray-300/80 dark:border-gray-300/10 rounded-full p-1 bg-white dark:bg-gray-950">
           <img :src="pixelfedFeed.account.avatar" :alt="pixelfedFeed.account.display_name" class="w-full h-full object-cover rounded-full" />
         </div>
 
@@ -81,7 +81,7 @@
       <!-- Mastodon Header -->
       <header v-else-if="activeTab === 'mastodon' && !mastodonError && mastodonFeed && !mastodonFeed.error" 
               class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 pb-12 border-b border-gray-400/20 dark:border-gray-800 mb-8">
-        <div class="w-24 h-24 md:w-28 md:h-28 border border-gray-300/80 dark:border-gray-300/10 rounded-full p-1 bg-white/40 dark:bg-gray-950/40 backdrop-blur-md">
+        <div class="w-24 h-24 md:w-28 md:h-28 border border-gray-300/80 dark:border-gray-300/10 rounded-full p-1 bg-white dark:bg-gray-950">
           <img :src="mastodonFeed.account.avatar" :alt="mastodonFeed.account.display_name" class="w-full h-full object-cover rounded-full" />
         </div>
 
@@ -123,7 +123,7 @@
 
       <!-- 2. TAB SWITCHER (Placed here: on top of posts, below the header!) -->
       <div class="flex justify-center mb-10">
-        <div class="relative flex p-1 bg-[#FAF8F5]/96 dark:bg-[#191816]/98 border border-gray-300/80 dark:border-gray-300/20 backdrop-blur-md rounded-full w-full max-w-[280px]">
+        <div class="relative flex p-1 bg-[#FAF8F5]/96 dark:bg-[#191816]/98 border border-gray-300/80 dark:border-gray-300/20 rounded-full w-full max-w-[280px]">
           <!-- Sliding active indicator matching navbar active button style -->
           <div class="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] active-indicator rounded-full transition-transform duration-300 ease-out"
                :class="activeTab === 'mastodon' ? 'translate-x-full' : 'translate-x-0'"></div>
@@ -159,7 +159,7 @@
             
             <img :src="post.media[0]" :alt="post.caption || 'Pixelfed post'" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
 
-            <div v-if="post.media.length > 1" class="absolute top-2 right-2 md:top-3 md:right-3 bg-black/60 backdrop-blur-md w-7 h-7 flex items-center justify-center rounded-lg text-white leading-none">
+            <div v-if="post.media.length > 1" class="absolute top-2 right-2 md:top-3 md:right-3 bg-black/60 w-7 h-7 flex items-center justify-center rounded-lg text-white leading-none">
               <Icon name="heroicons:squares-2x2-20-solid" class="w-4 h-4" />
             </div>
 
@@ -181,7 +181,7 @@
         </div>
         <div v-else class="max-w-2xl mx-auto space-y-6">
           <article v-for="post in mastodonFeed.posts" :key="post.id" 
-                   class="border border-gray-400/15 dark:border-gray-800 rounded-xl p-5 md:p-6 bg-white/40 dark:bg-gray-950/40 backdrop-blur-md shadow-sm hover:border-gray-450 dark:hover:border-gray-700/80 transition-colors">
+                   class="border border-gray-400/15 dark:border-gray-800 rounded-xl p-5 md:p-6 bg-white dark:bg-gray-950 shadow-sm hover:border-gray-450 dark:hover:border-gray-700/80 transition-colors">
             
             <!-- Author row -->
             <div class="flex items-center justify-between mb-4">
@@ -237,7 +237,7 @@
                 leave-active-class="transition duration-200 ease-in"
                 leave-from-class="opacity-100 scale-100"
                 leave-to-class="opacity-0 scale-95">
-      <div v-if="selectedPost" class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10 bg-black/80 backdrop-blur-md"
+      <div v-if="selectedPost" class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10 bg-black/95"
            @click.self="closePost">
         
         <button class="absolute top-4 right-4 text-white/70 hover:text-white p-2 z-50 transition-colors" @click="closePost">
@@ -315,7 +315,7 @@
                 leave-active-class="transition duration-200 ease-in"
                 leave-from-class="opacity-100 scale-100"
                 leave-to-class="opacity-0 scale-95">
-      <div v-if="mastodonLightboxMedia" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
+      <div v-if="mastodonLightboxMedia" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95"
            @click.self="closeMastodonMedia">
         
         <button class="absolute top-4 right-4 text-white/70 hover:text-white p-2 z-50" @click="closeMastodonMedia">

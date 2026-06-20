@@ -1,6 +1,6 @@
 <template>
-    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-screen flex justify-center items-center bg-gray-700/30 backdrop-blur">
-    <div class="max-w-xl bg-gray-700/30 backdrop-blur border border-gray-900/10 dark:border-gray-300/10 rounded-xl overflow-clip">
+    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-screen flex justify-center items-center bg-black/80">
+    <div class="max-w-xl bg-white dark:bg-gray-900 border border-gray-900/10 dark:border-gray-300/10 rounded-xl overflow-clip">
         <div class="px-5 h-8"></div>
         <div class="flex justify-center items-center">
         <img :src="imageSrc" alt="">

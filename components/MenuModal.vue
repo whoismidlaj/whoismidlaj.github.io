@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed bottom-20 left-1/2 -translate-x-1/2 w-screen flex justify-center items-center px-5">
+    <div class="fixed bottom-20 left-1/2 -translate-x-1/2 w-screen flex justify-center items-center px-5 z-[999]">
         <div class="menuContainer w-full overflow-clip">
             <div class="flex flex-col">
                 <NuxtLink @click="handleClick" :class="{'active': $route.path === '/'}" class="menuItem" to="/">Home 
