@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "src": "https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=2675&auto=format&fit=crop",
+        "alt": "Mountain view",
+        "caption": "A beautiful view of the mountains."
+    },
+    {
+        "id": 2,
+        "src": "https://images.unsplash.com/photo-1682687220509-61b8a906ca19?q=80&w=2670&auto=format&fit=crop",
+        "alt": "Ocean sunset",
+        "caption": "Sunset over the ocean."
+    },
+    {
+        "id": 3,
+        "src": "https://images.unsplash.com/photo-1707345512638-997d31a10eaa?q=80&w=2670&auto=format&fit=crop",
+        "alt": "City lights",
+        "caption": "City lights at night."
+    },
+    {
+        "id": 4,
+        "src": "https://images.unsplash.com/photo-1707343848556-595e812c1b34?q=80&w=2670&auto=format&fit=crop",
+        "alt": "Forest path",
+        "caption": "A path through the forest."
+    }
+]

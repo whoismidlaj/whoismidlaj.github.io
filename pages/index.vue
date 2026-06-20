@@ -9,17 +9,17 @@
             Web developer and Front-end developer from India. With a keen eye for design and a passion for coding.
         </p>
         <div class="flex space-x-2 justify-center text-gray-100">
-        <a href="https://github.com/whoismidlaj" target="_blank" class="icon-btn">
-            <IconGit :fontControlled="false" />
+        <a href="https://github.com/whoismidlaj" target="_blank" class="icon-btn flex justify-center items-center">
+            <Icon name="simple-icons:github" class="w-6 h-6" />
         </a>
-        <a href="https://www.instagram.com/whoismidlaj/" target="_blank" class="icon-btn">
-            <IconInsta :fontControlled="false" />
+        <a href="https://www.instagram.com/whoismidlaj/" target="_blank" class="icon-btn flex justify-center items-center">
+            <Icon name="simple-icons:instagram" class="w-6 h-6" />
         </a>
-        <a rel="me" href="https://mastodon.social/@midlaj" target="_blank" class="icon-btn">
-            <IconMast :fontControlled="false" />
+        <a rel="me" href="https://mastodon.social/@midlaj" target="_blank" class="icon-btn flex justify-center items-center">
+            <Icon name="simple-icons:mastodon" class="w-6 h-6" />
         </a>
-        <a href="https://t.me/whatismidlaj" target="_blank" class="icon-btn">
-            <IconTele :fontControlled="false" />
+        <a href="https://t.me/whatismidlaj" target="_blank" class="icon-btn flex justify-center items-center">
+            <Icon name="simple-icons:telegram" class="w-6 h-6" />
         </a>
         </div>
         <div class="flex gap-4">
@@ -32,7 +32,7 @@
                 <NuxtLink to="/projects" class="">View All</NuxtLink>
             </div>
             <div class="flex flex-col gap-4">
-                <WorkCard limit="2" />
+                <WorkCard :limit="2" />
             </div>
         </div>
     <!-- <VisitorsCounter /> -->
@@ -40,10 +40,7 @@
 </template>
 
 <script setup>
-import IconGit from '~/assets/img/socials/github.svg'
-import IconInsta from '~/assets/img/socials/instagram.svg'
-import IconMast from '~/assets/img/socials/mastodon.svg'
-import IconTele from '~/assets/img/socials/telegram.svg'
+
 
 const colorMode = useColorMode();
 </script>

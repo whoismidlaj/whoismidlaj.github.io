@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "This Portfolio",
-        "git": "https://github.com/whoismidlaj/NuxtFolio",
+        "git": "https://github.com/whoismidlaj/portfolio",
         "link": "",
         "tech": [
             "nuxt",
