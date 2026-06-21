@@ -170,7 +170,11 @@
 </template>
 
 <script setup>
-
-
-
+useSeoMeta({
+  title: 'About Midlaj | Web Developer',
+  ogTitle: 'About Midlaj | Web Developer',
+  description: 'Learn more about Midlaj, a web developer based in Kerala, India, specializing in React, Next.js, Vue, and Nuxt.js.',
+  ogDescription: 'Learn more about Midlaj, a web developer based in Kerala, India, specializing in React, Next.js, Vue, and Nuxt.js.',
+  ogType: 'profile',
+})
 </script>

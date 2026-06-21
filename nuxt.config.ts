@@ -5,6 +5,16 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
+      title: 'midlaj | pixels & thoughts',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Web Developer focusing on clean layouts, beautiful design, and simple interactions.' },
+        { name: 'author', content: 'Midlaj' }
+      ],
       script: [
         {
           src: 'https://analytics.onlyfrens.in/script.js',
