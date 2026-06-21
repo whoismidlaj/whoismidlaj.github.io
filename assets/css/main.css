@@ -198,22 +198,22 @@
 
     .Profile {
       @apply w-28 h-28 mb-8 rounded-full object-cover;
-      background-color: var(--accent-light) !important;
+      background-color: var(--button-bg) !important;
       border: 2px solid var(--accent-color) !important;
     }
 
     .dark .Profile {
-      background-color: var(--text-muted) !important;
+      background-color: var(--button-bg) !important;
     }
 
     .TopBarProfile {
       @apply w-10 h-10 rounded-full object-cover;
-      background-color: var(--accent-light) !important;
+      background-color: var(--button-bg) !important;
       border: 1px solid var(--accent-color) !important;
     }
 
     .dark .TopBarProfile {
-      background-color: var(--text-muted) !important;
+      background-color: var(--button-bg) !important;
     }
 
     .theme-toggle-btn {

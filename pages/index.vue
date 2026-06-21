@@ -12,7 +12,6 @@
         <div class="flex flex-wrap items-center gap-4 mb-10">
             <div class="flex gap-4">
                 <a href="mailto:midlaj@tuta.io" target="_blank" class="btn btn-primary">Email Me</a>
-                <a href="../midlaj-resume.pdf" target="_blank" class="btn btn-primary">Resume</a>
             </div>
             <div class="h-6 w-[1px] bg-[var(--border-color)] hidden sm:block"></div>
             <div class="flex space-x-2 text-gray-100">

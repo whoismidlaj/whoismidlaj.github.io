@@ -5,13 +5,13 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      // script: [
-      //   {
-      //     src: 'https://cloud.umami.is/script.js',
-      //     defer: true,
-      //     'data-website-id': 'e2759eea-c1c1-417c-a99e-7deaf62f4b4c'
-      //   }
-      // ],
+      script: [
+        {
+          src: 'https://analytics.onlyfrens.in/script.js',
+          defer: true,
+          'data-website-id': '029c73f4-aadc-458d-81fb-0ab5e3756736'
+        }
+      ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-01-30',
   colorMode: {
     classSuffix: '',
-    preference: 'dark',
+    preference: 'system',
     fallback: 'light'
   },
   plugins: [

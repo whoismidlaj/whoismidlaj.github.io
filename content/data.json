@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "ListenLoop",
-        "git": "https://github.com/whoismidlaj/listenloop2",
+        "git": "",
         "link": "https://listenloop.onlyfrens.in",
         "tech": [
             "react",

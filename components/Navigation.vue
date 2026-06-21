@@ -53,7 +53,7 @@ const setTheme = (theme) => {
 <template>
   <nav class="Navigation px-5">
     <div class="NavContainer container mx-auto flex justify-between">
-      <div class="menu hidden relative md:flex items-center gap-1">
+      <div class="menu flex relative max-[360px]:hidden items-center gap-1">
         <!-- Sliding active indicator matching tab style -->
         <div class="absolute top-0 bottom-0 left-0 w-12 active-indicator rounded-full transition-all duration-300 ease-out"
              :style="{ transform: `translateX(${activeIndex * 52}px)` }"
@@ -80,7 +80,7 @@ const setTheme = (theme) => {
           <Icon name="heroicons:at-symbol" class="w-5 h-5" />
         </NuxtLink>
       </div>
-      <div @click="toggleMenu" class="menuMobile flex justify-center items-center rounded-full cursor-pointer md:hidden">
+      <div @click="toggleMenu" class="menuMobile hidden justify-center items-center rounded-full cursor-pointer max-[360px]:flex">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
           stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
