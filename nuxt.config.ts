@@ -9,7 +9,8 @@ export default defineNuxtConfig({
         {
           src: 'https://analytics.onlyfrens.in/script.js',
           defer: true,
-          'data-website-id': '029c73f4-aadc-458d-81fb-0ab5e3756736'
+          'data-website-id': '029c73f4-aadc-458d-81fb-0ab5e3756736',
+          'data-domains': 'onlyfrens.in'
         }
       ],
       link: [
