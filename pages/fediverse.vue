@@ -54,10 +54,16 @@
           <!-- Handle & View button -->
           <div class="flex flex-col sm:flex-row items-center gap-3 mb-6 justify-center md:justify-start">
             <span class="text-xs text-gray-500 dark:text-gray-400 font-medium">@{{ pixelfedFeed.account.username }}@pixelfed.social</span>
-            <a :href="pixelfedFeed.account.url" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xs py-1 px-3 rounded-md font-medium inline-flex items-center gap-1.5 hover:scale-[1.02] transition-transform">
-              <Icon name="simple-icons:pixelfed" class="w-3.5 h-3.5 text-[#6366f1]" />
-              View on Pixelfed
-            </a>
+            <div class="flex items-center gap-2">
+              <a :href="pixelfedFeed.account.url" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xs py-1 px-3 rounded-md font-medium inline-flex items-center gap-1.5 hover:scale-[1.02] transition-transform">
+                <Icon name="simple-icons:pixelfed" class="w-3.5 h-3.5 text-[#6366f1]" />
+                View on Pixelfed
+              </a>
+              <button @click="openFollowModal('pixelfed')" class="btn btn-primary text-xs py-1 px-3 rounded-md font-medium inline-flex items-center gap-1.5 hover:scale-[1.02] transition-transform">
+                <Icon name="heroicons:user-plus" class="w-3.5 h-3.5 text-[#6366f1]" />
+                Follow
+              </button>
+            </div>
           </div>
 
           <!-- Stats -->
@@ -97,10 +103,16 @@
           <!-- Handle & View button -->
           <div class="flex flex-col sm:flex-row items-center gap-3 mb-6 justify-center md:justify-start">
             <span class="text-xs text-gray-500 dark:text-gray-400 font-medium">@{{ mastodonFeed.account.username }}@mastodon.social</span>
-            <a :href="mastodonFeed.account.url" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xs py-1 px-3 rounded-md font-medium inline-flex items-center gap-1.5 hover:scale-[1.02] transition-transform">
-              <Icon name="simple-icons:mastodon" class="w-3.5 h-3.5 text-sky-400" />
-              View on Mastodon
-            </a>
+            <div class="flex items-center gap-2">
+              <a :href="mastodonFeed.account.url" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xs py-1 px-3 rounded-md font-medium inline-flex items-center gap-1.5 hover:scale-[1.02] transition-transform">
+                <Icon name="simple-icons:mastodon" class="w-3.5 h-3.5 text-sky-400" />
+                View on Mastodon
+              </a>
+              <button @click="openFollowModal('mastodon')" class="btn btn-primary text-xs py-1 px-3 rounded-md font-medium inline-flex items-center gap-1.5 hover:scale-[1.02] transition-transform">
+                <Icon name="heroicons:user-plus" class="w-3.5 h-3.5 text-sky-400" />
+                Follow
+              </button>
+            </div>
           </div>
 
           <!-- Stats -->
@@ -340,6 +352,81 @@
         </div>
       </div>
     </Transition>
+
+    <!-- ==================== FEDIVERSE FOLLOW MODAL ==================== -->
+    <Transition enter-active-class="transition duration-300 ease-out"
+                enter-from-class="opacity-0 scale-95"
+                enter-to-class="opacity-100 scale-100"
+                leave-active-class="transition duration-200 ease-in"
+                leave-from-class="opacity-100 scale-100"
+                leave-to-class="opacity-0 scale-95">
+      <div v-if="showFollowModal" class="fixed inset-0 z-[1000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+           @click.self="closeFollowModal">
+        
+        <div class="bg-[var(--bg-color)] border border-[var(--border-color)] rounded-xl w-full max-w-md shadow-2xl p-6 relative">
+          <!-- Close button -->
+          <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:hover:text-white transition-colors" @click="closeFollowModal">
+            <Icon name="heroicons:x-mark" class="w-6 h-6" />
+          </button>
+
+          <!-- Header -->
+          <h2 class="text-xl font-bold mb-2 flex items-center gap-2">
+            <Icon :name="followType === 'mastodon' ? 'simple-icons:mastodon' : 'simple-icons:pixelfed'" class="w-6 h-6" :class="followType === 'mastodon' ? 'text-sky-400' : 'text-[#6366f1]'" />
+            Follow on the Fediverse
+          </h2>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mb-6">
+            Since the Fediverse is decentralized, you can follow from any Mastodon, Pixelfed, or other ActivityPub instance.
+          </p>
+
+          <!-- Remote Follow Flow -->
+          <form @submit.prevent="handleFollowRedirect" class="space-y-4 mb-6">
+            <div>
+              <label for="instance-input" class="block text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider mb-2">Your Home Instance</label>
+              <div class="flex gap-2">
+                <input 
+                  id="instance-input"
+                  type="text" 
+                  v-model="userInstance" 
+                  placeholder="e.g. mastodon.social, pixelfed.social" 
+                  required
+                  class="flex-1 px-3 py-2 text-sm bg-white dark:bg-gray-950 border border-[var(--border-color)] rounded-lg outline-none focus:border-[var(--accent-color)] transition-colors text-gray-900 dark:text-white placeholder-gray-400"
+                />
+                <button type="submit" class="btn btn-primary text-xs font-semibold px-4 rounded-lg bg-[var(--accent-color)]! text-white!">
+                  Go
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="relative flex py-3 items-center">
+            <div class="flex-grow border-t border-[var(--border-color)]"></div>
+            <span class="flex-shrink mx-4 text-xs text-gray-400 font-medium uppercase tracking-wider">or</span>
+            <div class="flex-grow border-t border-[var(--border-color)]"></div>
+          </div>
+
+          <!-- Direct Copy Flow -->
+          <div class="space-y-3 mt-3 text-center">
+            <span class="block text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">Copy Full Handle</span>
+            <div class="flex items-center justify-between bg-white dark:bg-gray-950 border border-[var(--border-color)] p-2.5 rounded-lg">
+              <span class="text-xs font-mono text-gray-700 dark:text-gray-300">
+                {{ followType === 'mastodon' ? '@midlaj@mastodon.social' : '@midlaj@pixelfed.social' }}
+              </span>
+              <button 
+                type="button"
+                @click="copyHandle(followType === 'mastodon' ? '@midlaj@mastodon.social' : '@midlaj@pixelfed.social')" 
+                class="text-xs text-[var(--accent-color)] font-semibold hover:opacity-85 transition-opacity flex items-center gap-1"
+              >
+                <Icon :name="copiedHandle ? 'heroicons:check' : 'heroicons:document-duplicate'" class="w-4 h-4" />
+                {{ copiedHandle ? 'Copied' : 'Copy' }}
+              </button>
+            </div>
+            <p class="text-[10px] text-gray-400 leading-normal">
+              Paste this handle into the search bar of your favorite Fediverse app (like Mastodon, Pixelfed, Mona, Ivory, etc.) to follow directly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -400,6 +487,48 @@ const formatDate = (dateStr: string) => {
     month: 'short',
     day: 'numeric'
   })
+}
+
+const copiedHandle = ref('')
+const copyHandle = (handle: string) => {
+  navigator.clipboard.writeText(handle)
+  copiedHandle.value = handle
+  setTimeout(() => {
+    if (copiedHandle.value === handle) {
+      copiedHandle.value = ''
+    }
+  }, 2000)
+}
+
+const showFollowModal = ref(false)
+const followType = ref<'mastodon' | 'pixelfed'>('mastodon')
+const userInstance = ref('')
+
+const openFollowModal = (type: 'mastodon' | 'pixelfed') => {
+  followType.value = type
+  showFollowModal.value = true
+  document.body.style.overflow = 'hidden'
+}
+
+const closeFollowModal = () => {
+  showFollowModal.value = false
+  document.body.style.overflow = ''
+  userInstance.value = ''
+}
+
+const handleFollowRedirect = () => {
+  let instance = userInstance.value.trim()
+  if (!instance) return
+  
+  // Clean instance name
+  instance = instance.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0]
+  
+  const targetUri = followType.value === 'mastodon' 
+    ? 'https://mastodon.social/@midlaj' 
+    : 'https://pixelfed.social/midlaj'
+    
+  window.open(`https://${instance}/authorize_interaction?uri=${encodeURIComponent(targetUri)}`, '_blank')
+  closeFollowModal()
 }
 </script>
 
