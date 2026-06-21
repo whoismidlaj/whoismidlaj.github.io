@@ -54,4 +54,15 @@
     <!-- <VisitorsCounter /> -->
     </div>
 </template>
+
+<script setup>
+useSeoMeta({
+  title: 'midlaj | pixels & thoughts',
+  ogTitle: 'midlaj | pixels & thoughts',
+  description: 'Web Developer focusing on clean layouts, beautiful design, and simple interactions. Building websites, web apps, and digital ideas.',
+  ogDescription: 'Web Developer focusing on clean layouts, beautiful design, and simple interactions. Building websites, web apps, and digital ideas.',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+})
+</script>
 
