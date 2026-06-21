@@ -59,10 +59,34 @@
 useSeoMeta({
   title: 'midlaj | pixels & thoughts',
   ogTitle: 'midlaj | pixels & thoughts',
-  description: 'Web Developer focusing on clean layouts, beautiful design, and simple interactions. Building websites, web apps, and digital ideas.',
-  ogDescription: 'Web Developer focusing on clean layouts, beautiful design, and simple interactions. Building websites, web apps, and digital ideas.',
+  description: 'Personal homepage of midlaj (known online as whoismidlaj). A creative space sharing digital pixels, thoughts, websites, web apps, and simple web layouts.',
+  ogDescription: 'Personal homepage of midlaj (known online as whoismidlaj). A creative space sharing digital pixels, thoughts, websites, web apps, and digital ideas.',
   ogType: 'website',
   twitterCard: 'summary_large_image',
+})
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': 'Midlaj',
+        'alternateName': ['whoismidlaj', 'midlajm'],
+        'url': 'https://onlyfrens.in',
+        'description': 'Creator and developer building websites, web apps, and digital ideas.',
+        'sameAs': [
+          'https://github.com/whoismidlaj',
+          'https://instagram.com/whoismidlaj',
+          'https://mastodon.social/@midlaj',
+          'https://pixelfed.social/midlaj',
+          'https://t.me/whatismidlaj',
+          'mailto:midlaj@tuta.io'
+        ]
+      })
+    }
+  ]
 })
 </script>
 
