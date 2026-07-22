@@ -181,8 +181,8 @@
             </li>
             <li class="flex items-center flex-wrap gap-1.5">
                 Tracking data using 
-                <a href="https://ackee.electerious.com" target="_blank" class="flex items-center gap-1 hover:text-[var(--text-main)] transition-colors">
-                    <span class="w-4 h-4 rounded-full" style="background: linear-gradient(135deg, #73fac8, #00bee1);"></span> Ackee
+                <a href="https://umami.is" target="_blank" class="flex items-center gap-1 hover:text-[var(--text-main)] transition-colors">
+                    <Icon name="simple-icons:umami" class="w-4 h-4" /> Umami
                 </a>, open-source analytics
             </li>
         </ul>

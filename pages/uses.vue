@@ -157,11 +157,11 @@
 
           <div class="p-4 sm:p-6 hover:bg-[var(--card-details-bg)] transition-colors duration-300 flex flex-col sm:flex-row items-start gap-4 sm:gap-6 group">
             <div class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex shrink-0 items-center justify-center border border-gray-200/50 dark:border-gray-700/50 group-hover:border-[var(--accent-color)] transition-colors duration-300 p-2">
-              <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/ackee.svg" alt="Ackee" class="w-full h-full object-contain" />
+              <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/umami.svg" alt="Umami" class="w-full h-full object-contain dark:invert [.matrix_&]:invert" />
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
-              <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Ackee</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Self-hosted, privacy-focused analytics. I use it to track visitors without invading their privacy.</p>
+              <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Umami</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Privacy-focused open-source analytics. I use it to track visitors without invading their privacy.</p>
             </div>
           </div>
 

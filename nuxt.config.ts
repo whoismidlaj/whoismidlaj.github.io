@@ -17,11 +17,9 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: 'https://analytics.onlyfrens.in/tracker.js',
-          async: true,
-          'data-ackee-server': 'https://analytics.onlyfrens.in',
-          'data-ackee-domain-id': '690ac550-0a9c-4840-90c1-901e689ac267',
-          'data-ackee-opts': '{"ignoreLocalhost": true}'
+          defer: true,
+          src: 'https://cloud.umami.is/script.js',
+          'data-website-id': 'c9a4789b-3308-487c-b50f-2b7ac0832faa'
         }
       ],
       link: [
