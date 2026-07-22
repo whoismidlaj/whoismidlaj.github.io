@@ -20,14 +20,14 @@
               <img :src="lenovoImg" alt="Lenovo ThinkBook 15" class="w-full h-full object-contain" />
             </div>
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Lenovo ThinkBook 15</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">My primary workstation laptop. Reliable, sturdy, and packs enough performance for all my development and daily computing needs.</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">Primary workstation laptop. Comes with a broken hinge and built-in rulers (vertical lines) on the display. Still works, so it stays.</p>
           </div>
           <div class="border border-[var(--border-color)] rounded-2xl p-6 bg-[var(--card-bg)] hover:bg-[var(--card-details-bg)] transition-colors duration-300 flex flex-col group">
             <div class="w-full aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl mb-6 flex items-center justify-center overflow-hidden border border-gray-200/50 dark:border-gray-700/50 group-hover:border-[var(--accent-color)] transition-colors duration-300 relative p-4">
               <img :src="nothingImg" alt="Nothing Phone (2)" class="w-full h-full object-contain" />
             </div>
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Nothing Phone (2)</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">My daily driver smartphone. I love the glyph interface and the incredibly smooth, bloat-free Nothing OS experience.</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">Daily driver. Has a broken back glass and ultrawide lens cover, but still works perfectly fine.</p>
           </div>
         </div>
       </section>
@@ -51,7 +51,7 @@
               <img :src="holaImg" alt="Truthear Hola IEM" class="w-full h-full object-contain" />
             </div>
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Truthear Hola IEM</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">My wired in-ear monitors for focused desk listening sessions. Fantastic tuning for the price.</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">Wired in-ear monitors for focused desk listening sessions. Fantastic tuning for the price.</p>
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Fedora 44 Workstation</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">My primary daily driver OS. Stable, bleeding-edge packages, and a pure GNOME desktop experience.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Primary daily driver OS. Stable, bleeding-edge packages, and a pure GNOME desktop experience.</p>
             </div>
           </div>
 
@@ -80,7 +80,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Ubuntu 22 Server</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">The OS powering my cloud servers and self-hosted infrastructure. Reliable and heavily supported.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Powering cloud servers and self-hosted infrastructure. Reliable and heavily supported.</p>
             </div>
           </div>
 
@@ -90,7 +90,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Zed Editor</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">A lightning-fast, collaborative code editor written in Rust. My new go-to for coding.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">A lightning-fast, collaborative code editor written in Rust. The new go-to for coding.</p>
             </div>
           </div>
 
@@ -100,7 +100,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Antigravity</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">My AI pair programming assistant that helps me write code and manage projects faster.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">AI pair programming assistant that helps write code and manage projects faster.</p>
             </div>
           </div>
 
@@ -121,7 +121,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Oracle Cloud</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Where I host my servers and projects. Their Always Free tier is unmatched for personal infrastructure.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Used for hosting servers and projects. The Always Free tier is unmatched for personal infrastructure.</p>
             </div>
           </div>
 
@@ -131,7 +131,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Dokploy</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">My preferred PaaS for managing deployments and keeping my self-hosted services running smoothly.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Preferred PaaS for managing deployments and keeping self-hosted services running smoothly.</p>
             </div>
           </div>
 
@@ -141,7 +141,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Cloudflare</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">DNS, CDN, and security for my websites. Essential infrastructure layer.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">DNS, CDN, and security for personal websites. Essential infrastructure layer.</p>
             </div>
           </div>
 
@@ -151,7 +151,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Backblaze</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">B2 Cloud Storage for my backups and Ente Photos data storage.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">B2 Cloud Storage for backups and Ente Photos data storage.</p>
             </div>
           </div>
 
@@ -182,7 +182,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Firefox</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">My browser of choice for privacy, dev tools, and keeping the open web alive.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Browser of choice for privacy, dev tools, and keeping the open web alive.</p>
             </div>
           </div>
 
@@ -192,7 +192,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Tutanota (Tuta)</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Privacy-first, encrypted email provider. My primary inbox for personal communications.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Privacy-first, encrypted email provider. Primary inbox for personal communications.</p>
             </div>
           </div>
 
@@ -202,7 +202,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Proton VPN</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Fast, secure, and trustworthy VPN for protecting my traffic on public networks.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Fast, secure, and trustworthy VPN for protecting traffic on public networks.</p>
             </div>
           </div>
 
@@ -212,7 +212,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Bitwarden</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Open-source password manager. Keeps my digital life secure across all devices.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Open-source password manager. Keeps credentials and digital life secure across all devices.</p>
             </div>
           </div>
 
@@ -232,7 +232,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Ente Auth</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">My 2FA authenticator app. Syncs securely across devices with end-to-end encryption.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">2FA authenticator app. Syncs securely across devices with end-to-end encryption.</p>
             </div>
           </div>
 
@@ -273,7 +273,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-1 sm:gap-6 flex-1 mt-1 sm:mt-0 sm:items-baseline">
               <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">OpenTune</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">My music player of choice. Open-source and gets out of the way.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Music player of choice. Open-source and gets out of the way.</p>
             </div>
           </div>
 
@@ -292,7 +292,7 @@
               <img :src="w175Img" alt="Kawasaki W175" class="w-full h-full object-contain" />
             </div>
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Kawasaki W175</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">My preferred mode of transportation. A beautiful retro-styled motorcycle that makes every commute enjoyable.</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">Preferred mode of transportation. A beautiful retro-styled motorcycle that makes every commute enjoyable.</p>
           </div>
         </div>
       </section>
@@ -316,3 +316,4 @@ useSeoMeta({
   ogType: 'website',
 })
 </script>
+
