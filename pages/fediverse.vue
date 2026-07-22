@@ -135,7 +135,7 @@
 
       <!-- 2. TAB SWITCHER (Placed here: on top of posts, below the header!) -->
       <div class="flex justify-center mb-10">
-        <div class="relative flex p-1 bg-[#FAF8F5]/96 dark:bg-[#191816]/98 border border-gray-300/80 dark:border-gray-300/20 rounded-full w-full max-w-[280px]">
+        <div class="tab-switcher-container relative flex p-1 bg-[var(--card-details-bg)] border border-[var(--border-color)] rounded-full w-full max-w-[280px]">
           <!-- Sliding active indicator matching navbar active button style -->
           <div class="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] active-indicator rounded-full transition-transform duration-300 ease-out"
                :class="activeTab === 'mastodon' ? 'translate-x-full' : 'translate-x-0'"></div>

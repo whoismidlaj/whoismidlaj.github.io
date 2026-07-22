@@ -196,24 +196,42 @@
     
 
 
-    .Profile {
-      @apply w-28 h-28 mb-8 rounded-full object-cover;
+    .ProfileContainer {
+      @apply w-28 h-28 mb-8 rounded-full overflow-hidden flex items-center justify-center transition-all duration-300;
       background-color: var(--button-bg) !important;
       border: 2px solid var(--accent-color) !important;
     }
 
-    .dark .Profile {
-      background-color: var(--button-bg) !important;
+    .dark .ProfileContainer {
+      background-color: var(--bg-color) !important;
+      border-color: var(--accent-color) !important;
     }
 
-    .TopBarProfile {
-      @apply w-10 h-10 rounded-full object-cover;
+    .Profile {
+      @apply w-full h-full object-cover;
+    }
+
+    .dark .Profile {
+      filter: invert(0.92) brightness(0.95) !important;
+    }
+
+    .TopBarProfileContainer {
+      @apply w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-all duration-300;
       background-color: var(--button-bg) !important;
       border: 1px solid var(--accent-color) !important;
     }
 
+    .dark .TopBarProfileContainer {
+      background-color: var(--bg-color) !important;
+      border-color: var(--accent-color) !important;
+    }
+
+    .TopBarProfile {
+      @apply w-full h-full object-cover;
+    }
+
     .dark .TopBarProfile {
-      background-color: var(--button-bg) !important;
+      filter: invert(0.92) brightness(0.95) !important;
     }
 
     .theme-toggle-btn {
@@ -292,13 +310,9 @@
 
     .btn-primary {
       @apply flex items-center;
-      background-color: rgba(255, 255, 255, 0.4) !important;
+      background-color: transparent !important;
       border-color: var(--border-color) !important;
       color: var(--text-main) !important;
-    }
-
-    .dark .btn-primary {
-      background-color: rgba(34, 32, 29, 0.4) !important;
     }
 
     .btn-primary.active, .btn-primary:hover {
@@ -312,13 +326,15 @@
     }
 
     .icon-btn {
-      @apply h-10 w-10 p-2 rounded-full cursor-pointer;
+      @apply h-10 w-10 p-2 rounded-full cursor-pointer transition-all duration-300;
       background-color: var(--button-bg) !important;
       color: var(--text-main) !important;
     }
 
     .icon-btn:hover {
       background-color: var(--button-hover) !important;
+      color: var(--accent-color) !important;
+      transform: translateY(-2px);
     }
 
     .icontext-btn {
@@ -385,6 +401,186 @@
       @apply border-t;
       background-color: var(--card-details-bg) !important;
       border-color: var(--border-color) !important;
+    }
+
+    /* Matrix Theme Overrides */
+    html.matrix {
+      --bg-color: #000000;
+      --text-main: #00FF41;
+      --text-muted: #00FF41;
+      --text-header: #00FF41;
+      --border-color: #00FF41;
+      --border-light: rgba(0, 255, 65, 0.4);
+      --card-bg: #000000;
+      --card-details-bg: #000000;
+      --button-bg: #000000;
+      --button-hover: #00FF41;
+      --accent-color: #00FF41;
+      --accent-light: #00FF41;
+      --accent-border: #00FF41;
+    }
+
+    .matrix, .matrix * {
+      font-family: Hack, monospace, Courier, monospace !important;
+      border-radius: 0px !important;
+      text-shadow: 0 0 2px rgba(0, 255, 65, 0.35) !important;
+    }
+
+    /* Target all backgrounds */
+    .matrix body, .matrix main, .matrix .updates, .matrix .menuContainer {
+      background-color: #000000 !important;
+      background-image: none !important;
+    }
+
+    .matrix .updates-backdrop {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .matrix .bg-gray-300\/30, 
+    .matrix .bg-gray-800, 
+    .matrix .bg-gray-800\/50, 
+    .matrix .bg-white\/40, 
+    .matrix .bg-gray-950\/40, 
+    .matrix .bg-gray-300, 
+    .matrix .bg-gray-900, 
+    .matrix .bg-white,
+    .matrix div[class*="bg-"], 
+    .matrix section[class*="bg-"], 
+    .matrix a[class*="bg-"],
+    .matrix .experience-item,
+    .matrix .WorkCard,
+    .matrix .WorkDetails,
+    .matrix .skill {
+      background-color: #000000 !important;
+      background-image: none !important;
+    }
+
+    /* Target all border colors */
+    .matrix *, 
+    .matrix .border, 
+    .matrix [class*="border-"] {
+      border-color: #00FF41 !important;
+    }
+
+    /* Target all text colors */
+    .matrix p, 
+    .matrix span, 
+    .matrix h1, 
+    .matrix h2, 
+    .matrix h3, 
+    .matrix h4, 
+    .matrix h5, 
+    .matrix h6, 
+    .matrix li, 
+    .matrix a, 
+    .matrix div, 
+    .matrix input, 
+    .matrix textarea, 
+    .matrix button, 
+    .matrix label,
+    .matrix [class*="text-"] {
+      color: #00FF41 !important;
+    }
+
+    /* SVG Colors */
+    .matrix svg, 
+    .matrix svg *, 
+    .matrix svg path,
+    .matrix [class*="text-"] svg,
+    .matrix [class*="text-"] svg * {
+      color: #00FF41 !important;
+      fill: currentColor !important;
+    }
+
+    /* Buttons & Interactive Hovers */
+    .matrix .btn:hover, 
+    .matrix a.menuItem:hover, 
+    .matrix .icontext-btn:hover, 
+    .matrix .icon-btn:hover,
+    .matrix .theme-toggle-btn:hover,
+    .matrix .menuMobile:hover,
+    .matrix .Navigation a:hover,
+    .matrix .elsewhere a:hover,
+    .matrix .experience-item:hover,
+    .matrix .skill:hover {
+      background-color: #00FF41 !important;
+      color: #000000 !important;
+      border-color: #00FF41 !important;
+    }
+
+    .matrix .btn:hover *, 
+    .matrix a.menuItem:hover *, 
+    .matrix .icontext-btn:hover *, 
+    .matrix .icon-btn:hover *,
+    .matrix .theme-toggle-btn:hover *,
+    .matrix .menuMobile:hover *,
+    .matrix .Navigation a:hover *,
+    .matrix .elsewhere a:hover *,
+    .matrix .experience-item:hover *,
+    .matrix .skill:hover * {
+      color: #000000 !important;
+    }
+
+    /* Menu active state overrides */
+    .matrix a.menuItem.active {
+      background-color: #00FF41 !important;
+      color: #000000 !important;
+    }
+    .matrix a.menuItem.active * {
+      color: #000000 !important;
+    }
+
+    /* Slider Toggle Styles */
+    .matrix .theme-switcher-container,
+    .matrix .tab-switcher-container {
+      border: 2px solid #00FF41 !important;
+      background-color: #000000 !important;
+      max-width: 280px !important;
+    }
+    
+    .matrix .theme-switcher-container .active-indicator,
+    .matrix .tab-switcher-container .active-indicator {
+      background-color: #00FF41 !important;
+      border: none !important;
+    }
+
+    .matrix .theme-switcher-container button.text-gray-950,
+    .matrix .theme-switcher-container button.text-gray-950 *,
+    .matrix .tab-switcher-container button.text-\[var\(--accent-color\)\],
+    .matrix .tab-switcher-container button.text-\[var\(--accent-color\)\] * {
+      color: #000000 !important;
+    }
+
+    /* Floating Navigation Overrides */
+    .matrix .Navigation .NavContainer {
+      border: 2px solid #00FF41 !important;
+      background-color: #000000 !important;
+    }
+
+    .matrix .Navigation .active-indicator {
+      background-color: #00FF41 !important;
+      border: none !important;
+    }
+
+    .matrix .Navigation a.text-\[var\(--accent-color\)\],
+    .matrix .Navigation a.text-\[var\(--accent-color\)\] *,
+    .matrix .Navigation a.text-\[var\(--accent-color\)\] svg,
+    .matrix .Navigation a.text-\[var\(--accent-color\)\] svg * {
+      color: #000000 !important;
+    }
+
+    .matrix hr, .matrix .divider {
+      background-color: #00FF41 !important;
+      height: 2px !important;
+    }
+
+    .matrix .ProfileContainer, .matrix .TopBarProfileContainer {
+      border: 2px solid #00FF41 !important;
+      background-color: #00FF41 !important;
+    }
+
+    .matrix .Profile, .matrix .TopBarProfile {
+      filter: sepia(100%) hue-rotate(70deg) saturate(300%) contrast(1.2) !important;
     }
 
   }

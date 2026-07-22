@@ -17,10 +17,11 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: 'https://analytics.onlyfrens.in/script.js',
-          defer: true,
-          'data-website-id': '029c73f4-aadc-458d-81fb-0ab5e3756736',
-          'data-domains': 'onlyfrens.in'
+          src: 'https://analytics.onlyfrens.in/tracker.js',
+          async: true,
+          'data-ackee-server': 'https://analytics.onlyfrens.in',
+          'data-ackee-domain-id': '690ac550-0a9c-4840-90c1-901e689ac267',
+          'data-ackee-opts': '{"ignoreLocalhost": true}'
         }
       ],
       link: [

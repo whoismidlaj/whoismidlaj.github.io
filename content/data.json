@@ -1,5 +1,33 @@
 [
     {
+        "id": 4,
+        "name": "OnlyFrens",
+        "git": "",
+        "link": "https://onlyfrens.in",
+        "tech": [
+            "svelte",
+            "typescript",
+            "tailwindcss",
+            "postgresql",
+            "redis"
+        ],
+        "desc": "A profile platform that maps and groups public activity (GitHub commits, RSS feeds, listening habits, fediverse) into a clean visual feed."
+    },
+    {
+        "id": 5,
+        "name": "Journal",
+        "git": "",
+        "link": "",
+        "wip": true,
+        "tech": [
+            "react",
+            "tailwindcss",
+            "fastapi",
+            "postgresql"
+        ],
+        "desc": "A privacy-first, end-to-end encrypted personal memory stream to seamlessly capture thoughts, ideas, and memories."
+    },
+    {
         "id": 1,
         "name": "ListenLoop",
         "git": "",

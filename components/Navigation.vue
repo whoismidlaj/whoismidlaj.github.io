@@ -41,9 +41,9 @@ const activeIndex = computed(() => {
   if (path.startsWith('/about')) return 1
   if (path.startsWith('/projects')) return 2
   if (path.startsWith('/fediverse')) return 3
+  if (path.startsWith('/uses')) return 4
   return -1
 })
-
 const colorMode = useColorMode()
 const setTheme = (theme) => {
     colorMode.preference = theme;
@@ -55,7 +55,7 @@ const setTheme = (theme) => {
     <div class="NavContainer container mx-auto flex justify-between">
       <div class="menu flex relative max-[360px]:hidden items-center gap-1">
         <!-- Sliding active indicator matching tab style -->
-        <div class="absolute top-0 bottom-0 left-0 w-12 active-indicator rounded-full transition-all duration-300 ease-out"
+        <div class="absolute top-0 bottom-0 my-auto left-0 w-12 h-9 active-indicator rounded-full transition-all duration-300 ease-out"
              :style="{ transform: `translateX(${activeIndex * 52}px)` }"
              :class="{ 'opacity-0 scale-95': activeIndex === -1, 'opacity-100 scale-100': activeIndex !== -1 }"></div>
         
@@ -78,6 +78,11 @@ const setTheme = (theme) => {
                   to="/fediverse" aria-label="Fediverse"
                   :class="activeIndex === 3 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
           <Icon name="heroicons:at-symbol" class="w-5 h-5" />
+        </NuxtLink>
+        <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
+                  to="/uses" aria-label="Uses"
+                  :class="activeIndex === 4 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
+          <Icon name="heroicons:cpu-chip" class="w-5 h-5" />
         </NuxtLink>
       </div>
       <div @click="toggleMenu" class="menuMobile hidden justify-center items-center rounded-full cursor-pointer max-[360px]:flex">
@@ -113,6 +118,10 @@ const setTheme = (theme) => {
       <li class="text-sm">Fediverse feed is live, checkout my <NuxtLink
           class="underline underline-offset-2 text-[var(--accent-color)] hover:opacity-80 transition-opacity font-normal" @click="handleClick"
           to="/fediverse">Pixelfed posts</NuxtLink>
+      </li>
+      <li class="text-sm">Explore my hardware & software stack on <NuxtLink
+          class="underline underline-offset-2 text-[var(--accent-color)] hover:opacity-80 transition-opacity font-normal" @click="handleClick"
+          to="/uses">/uses</NuxtLink>
       </li>
     </ul>
     </div>

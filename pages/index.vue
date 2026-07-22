@@ -1,6 +1,8 @@
 <template>
     <div class="container mx-auto min-h-screen flex flex-col justify-center items-start px-5 pt-24 pb-24">
-        <img class="Profile" src="~/assets/img/profile-pic.png" alt="profile-pic">
+        <div class="ProfileContainer">
+            <img class="Profile" :src="profilePicSrc" alt="profile-pic">
+        </div>
         <h1 class="mb-8 text-5xl md:text-6xl">
         I'm midlaj
         </h1>
@@ -56,6 +58,16 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { useColorMode } from '#imports'
+import profilePic from '~/assets/img/profile-pic.png'
+import profilePicBlack from '~/assets/img/profile-pic-black.png'
+
+const colorMode = useColorMode()
+const profilePicSrc = computed(() => {
+  return colorMode.preference === 'matrix' ? profilePicBlack : profilePic
+})
+
 useSeoMeta({
   title: 'midlaj | pixels & thoughts',
   ogTitle: 'midlaj | pixels & thoughts',

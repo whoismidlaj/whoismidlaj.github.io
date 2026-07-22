@@ -12,5 +12,11 @@ export const techIcons = {
   supabase: 'simple-icons:supabase',
   nextjs: 'logos:nextjs-icon',
   postgresql: 'logos:postgresql',
-  nextauth: 'heroicons:lock-closed'
+  nextauth: 'heroicons:lock-closed',
+  dokploy: 'heroicons:squares-2x2',
+  ubuntu: 'logos:ubuntu',
+  'self-hosted': 'heroicons:server',
+  svelte: 'logos:svelte-icon',
+  typescript: 'logos:typescript-icon',
+  redis: 'logos:redis'
 };
