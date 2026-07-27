@@ -4,6 +4,7 @@
         "name": "OnlyFrens",
         "git": "",
         "link": "https://onlyfrens.in",
+        "icon": "heroicons:users",
         "tech": [
             "svelte",
             "typescript",
@@ -19,6 +20,7 @@
         "git": "",
         "link": "",
         "wip": true,
+        "icon": "heroicons:pencil-square",
         "tech": [
             "react",
             "tailwindcss",
@@ -32,6 +34,7 @@
         "name": "ListenLoop",
         "git": "",
         "link": "https://listenloop.onlyfrens.in",
+        "icon": "heroicons:musical-note",
         "tech": [
             "react",
             "fastapi",
@@ -47,6 +50,7 @@
         "name": "Time Tracker",
         "git": "https://github.com/whoismidlaj/time-tracker",
         "link": "https://timetracker.onlyfrens.fun/",
+        "icon": "heroicons:clock",
         "tech": [
             "nextjs",
             "postgresql",
@@ -60,6 +64,7 @@
         "name": "This Portfolio",
         "git": "https://github.com/whoismidlaj/portfolio",
         "link": "",
+        "icon": "heroicons:sparkles",
         "tech": [
             "nuxt",
             "vuejs",

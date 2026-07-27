@@ -298,15 +298,15 @@
         </div>
       </section>
 
-      <!-- References / Inspiration -->
-      <section class="mt-8 pt-8 border-t border-[var(--border-color)]">
-        <p class="text-xs text-gray-500 dark:text-gray-400">
+      <hr class="divider">
+      <ul class="credits list-none flex flex-col gap-3 text-[var(--text-muted)] text-xs md:text-sm">
+        <li class="flex items-center flex-wrap gap-1.5">
           Inspired by similar pages by 
-          <a href="https://andersnoren.se/gear/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent-color)] hover:underline">Anders Norén</a> 
+          <a href="https://andersnoren.se/gear/" target="_blank" class="flex items-center gap-1 hover:text-[var(--text-main)] transition-colors">Anders Norén</a> 
           and 
-          <a href="https://daleanthony.com/uses/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent-color)] hover:underline">Dale Anthony</a>.
-        </p>
-      </section>
+          <a href="https://daleanthony.com/uses/" target="_blank" class="flex items-center gap-1 hover:text-[var(--text-main)] transition-colors">Dale Anthony</a>
+        </li>
+      </ul>
 
     </div>
   </div>

@@ -289,7 +289,7 @@
     }
     
     p,li {
-      @apply text-base font-normal;
+      @apply text-[15px] font-normal;
       color: var(--text-muted) !important;
     }
 
@@ -364,6 +364,10 @@
 
     .technology-icon svg {
       color: var(--accent-color) !important;
+    }
+
+    .credits li {
+      @apply text-xs md:text-sm !important;
     }
 
     /* Experience */

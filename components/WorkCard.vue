@@ -17,7 +17,10 @@ const limitedWorks = computed(() => works.slice(0, props.limit));
 <template>
     <div class="WorkCard flex flex-col justify-between" v-for="work in limitedWorks" :key="work.id">
         <div class="flex flex-col p-5 gap-2">
-            <h3 class="text-xl">{{ work.name }}</h3>
+            <div class="flex items-center gap-2">
+                <Icon v-if="work.icon" :name="work.icon" class="w-5 h-5 text-[var(--accent-color)] shrink-0 -translate-y-[2px]" />
+                <h3 class="text-xl leading-none">{{ work.name }}</h3>
+            </div>
             <p>{{ work.desc }}</p>
         </div>
         <div class="px-5 py-3 flex justify-between items-center gap-4 WorkDetails">
