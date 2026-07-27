@@ -22,14 +22,14 @@
                             <Icon name="heroicons:briefcase" class="w-6 h-6" />
                         </div>
                     </NuxtLink>
-                    <NuxtLink @click="handleClick" :class="{'active': $route.path === '/fediverse'}" class="menuItem" to="/fediverse">Fediverse 
-                        <div class="icon w-6">
-                            <Icon name="heroicons:at-symbol" class="w-6 h-6" />
-                        </div>
-                    </NuxtLink>
                     <NuxtLink @click="handleClick" :class="{'active': $route.path === '/uses'}" class="menuItem" to="/uses">Uses 
                         <div class="icon w-6">
                             <Icon name="heroicons:cpu-chip" class="w-6 h-6" />
+                        </div>
+                    </NuxtLink>
+                    <NuxtLink @click="handleClick" :class="{'active': $route.path === '/fediverse'}" class="menuItem" to="/fediverse">Fediverse 
+                        <div class="icon w-6">
+                            <Icon name="heroicons:at-symbol" class="w-6 h-6" />
                         </div>
                     </NuxtLink>
                 </div>

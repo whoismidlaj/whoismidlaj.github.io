@@ -11,7 +11,7 @@
             "postgresql",
             "redis"
         ],
-        "desc": "A profile platform that maps and groups public activity (GitHub commits, RSS feeds, listening habits, fediverse) into a clean visual feed."
+        "desc": "A fun little experiment in building a simpler social media space — less noise, less algorithm, and more about frens and the things they share across the internet."
     },
     {
         "id": 5,

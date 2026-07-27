@@ -40,8 +40,8 @@ const activeIndex = computed(() => {
   if (path === '/') return 0
   if (path.startsWith('/about')) return 1
   if (path.startsWith('/projects')) return 2
-  if (path.startsWith('/fediverse')) return 3
-  if (path.startsWith('/uses')) return 4
+  if (path.startsWith('/uses')) return 3
+  if (path.startsWith('/fediverse')) return 4
   return -1
 })
 const colorMode = useColorMode()
@@ -75,14 +75,14 @@ const setTheme = (theme) => {
           <Icon name="heroicons:briefcase" class="w-5 h-5" />
         </NuxtLink>
         <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
-                  to="/fediverse" aria-label="Fediverse"
+                  to="/uses" aria-label="Uses"
                   :class="activeIndex === 3 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
-          <Icon name="heroicons:at-symbol" class="w-5 h-5" />
+          <Icon name="heroicons:cpu-chip" class="w-5 h-5" />
         </NuxtLink>
         <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
-                  to="/uses" aria-label="Uses"
+                  to="/fediverse" aria-label="Fediverse"
                   :class="activeIndex === 4 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
-          <Icon name="heroicons:cpu-chip" class="w-5 h-5" />
+          <Icon name="heroicons:at-symbol" class="w-5 h-5" />
         </NuxtLink>
       </div>
       <div @click="toggleMenu" class="menuMobile hidden justify-center items-center rounded-full cursor-pointer max-[360px]:flex">
