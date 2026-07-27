@@ -5,7 +5,9 @@
       <MatrixRain />
     </div>
     <TopBar/>
-    <NuxtPage />
+    <main>
+      <NuxtPage />
+    </main>
     <Navigation />
   </div>
 </template>
@@ -26,7 +28,7 @@ const colorMode = useColorMode();
 
 const isLoading = ref(true);
 const useLoading = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 150));
   isLoading.value = false;
 };
 

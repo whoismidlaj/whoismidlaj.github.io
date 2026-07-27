@@ -20,7 +20,7 @@
               <img :src="lenovoImg" alt="Lenovo ThinkBook 15" class="w-full h-full object-contain" />
             </div>
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent-color)] transition-colors duration-300">Lenovo ThinkBook 15</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">Primary workstation laptop. Comes with a broken hinge and built-in rulers (vertical lines) on the display. Still works, so it stays.</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1 leading-relaxed">Primary workstation laptop. Broken hinge, plus a few vertical lines on the display for extra character. Still works, so it stays.</p>
           </div>
           <div class="border border-[var(--border-color)] rounded-2xl p-6 bg-[var(--card-bg)] hover:bg-[var(--card-details-bg)] transition-colors duration-300 flex flex-col group">
             <div class="w-full aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl mb-6 flex items-center justify-center overflow-hidden border border-gray-200/50 dark:border-gray-700/50 group-hover:border-[var(--accent-color)] transition-colors duration-300 relative p-4">

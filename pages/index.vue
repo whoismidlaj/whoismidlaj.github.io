@@ -17,16 +17,16 @@
             </div>
             <div class="h-6 w-[1px] bg-[var(--border-color)] hidden sm:block"></div>
             <div class="flex space-x-2 text-gray-100">
-                <a href="https://github.com/whoismidlaj" target="_blank" class="icon-btn flex justify-center items-center">
+                <a href="https://github.com/whoismidlaj" target="_blank" aria-label="GitHub Profile" class="icon-btn flex justify-center items-center">
                     <Icon name="simple-icons:github" class="w-6 h-6" />
                 </a>
-                <a href="https://pixelfed.social/midlaj" target="_blank" class="icon-btn flex justify-center items-center">
+                <a href="https://pixelfed.social/midlaj" target="_blank" aria-label="Pixelfed Feed" class="icon-btn flex justify-center items-center">
                     <Icon name="simple-icons:pixelfed" class="w-6 h-6" />
                 </a>
-                <a rel="me" href="https://mastodon.social/@midlaj" target="_blank" class="icon-btn flex justify-center items-center">
+                <a rel="me" href="https://mastodon.social/@midlaj" target="_blank" aria-label="Mastodon Profile" class="icon-btn flex justify-center items-center">
                     <Icon name="simple-icons:mastodon" class="w-6 h-6" />
                 </a>
-                <a href="https://t.me/whatismidlaj" target="_blank" class="icon-btn flex justify-center items-center">
+                <a href="https://t.me/whatismidlaj" target="_blank" aria-label="Telegram Channel" class="icon-btn flex justify-center items-center">
                     <Icon name="simple-icons:telegram" class="w-6 h-6" />
                 </a>
             </div>
