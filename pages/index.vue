@@ -60,8 +60,8 @@
 <script setup>
 import { computed } from 'vue'
 import { useColorMode } from '#imports'
-import profilePic from '~/assets/img/profile-pic.png'
-import profilePicBlack from '~/assets/img/profile-pic-black.png'
+import profilePic from '~/assets/img/profile-pic.webp'
+import profilePicBlack from '~/assets/img/profile-pic-black.webp'
 
 const colorMode = useColorMode()
 const profilePicSrc = computed(() => {

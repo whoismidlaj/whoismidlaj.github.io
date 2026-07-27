@@ -31,6 +31,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
     },
   },
+  experimental: {
+    inlineSSRStyles: true
+  },
   css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
