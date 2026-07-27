@@ -68,8 +68,8 @@ const profilePicSrc = computed(() => {
 })
 
 useSeoMeta({
-  title: 'midlaj | pixels & thoughts',
-  ogTitle: 'midlaj | pixels & thoughts',
+  title: 'home / @whoismidlaj',
+  ogTitle: 'home / @whoismidlaj',
   description: 'Personal homepage of midlaj (known online as whoismidlaj). A creative space sharing digital pixels, thoughts, websites, web apps, and simple web layouts.',
   ogDescription: 'Personal homepage of midlaj (known online as whoismidlaj). A creative space sharing digital pixels, thoughts, websites, web apps, and digital ideas.',
   ogType: 'website',

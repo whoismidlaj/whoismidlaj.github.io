@@ -432,8 +432,8 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Fediverse Feed | Midlaj',
-  ogTitle: 'Fediverse Feed | Midlaj',
+  title: 'fediverse / @whoismidlaj',
+  ogTitle: 'fediverse / @whoismidlaj',
   description: 'View the live decentralized Pixelfed photos and Mastodon updates/toots shared by Midlaj.',
   ogDescription: 'View the live decentralized Pixelfed photos and Mastodon updates/toots shared by Midlaj.',
 })

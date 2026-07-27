@@ -113,7 +113,8 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Homelab',
+  title: 'homelab / @whoismidlaj',
+  ogTitle: 'homelab / @whoismidlaj',
   description:
     'Homelab overview and stack details for onlyfrens.in.',
 })

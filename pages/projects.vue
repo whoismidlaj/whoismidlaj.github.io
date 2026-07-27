@@ -35,8 +35,8 @@
 
 <script setup>
 useSeoMeta({
-  title: 'Projects | Midlaj',
-  ogTitle: 'Projects by Midlaj',
+  title: 'projects / @whoismidlaj',
+  ogTitle: 'projects / @whoismidlaj',
   description: 'Explore the portfolio projects, open-source work, and websites created by Midlaj, including ListenLoop and Time Tracker.',
   ogDescription: 'Explore the portfolio projects, open-source work, and websites created by Midlaj, including ListenLoop and Time Tracker.',
 })

@@ -320,8 +320,8 @@ import holaImg from '~/assets/img/uses/truthhearhola.png'
 import w175Img from '~/assets/img/uses/w175.png'
 
 useSeoMeta({
-  title: 'Uses | Midlaj',
-  ogTitle: 'Uses | Midlaj',
+  title: 'uses / @whoismidlaj',
+  ogTitle: 'uses / @whoismidlaj',
   description: 'A curated list of the hardware, software, and services used daily by Midlaj.',
   ogDescription: 'A curated list of the hardware, software, and services used daily by Midlaj.',
   ogType: 'website',
