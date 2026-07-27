@@ -249,7 +249,7 @@
         </div>
       </section>
 
-      <!-- Media & Entertainment (Vertical List) -->
+      <!-- Media & Entertainment (Vertical List)
       <section class="mb-16">
         <h2 class="mb-6 flex items-center gap-2">
           <Icon name="heroicons:play" class="w-6 h-6 text-[var(--accent-color)]" />
@@ -279,12 +279,13 @@
 
         </div>
       </section>
+      -->
 
-      <!-- Mobility (Grid Layout) -->
+      <!-- Transportation (Grid Layout) -->
       <section class="mb-16">
         <h2 class="mb-6 flex items-center gap-2">
           <Icon name="heroicons:map" class="w-6 h-6 text-[var(--accent-color)]" />
-          Mobility
+          Transportation
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="border border-[var(--border-color)] rounded-2xl p-6 bg-[var(--card-bg)] hover:bg-[var(--card-details-bg)] transition-colors duration-300 flex flex-col group">
