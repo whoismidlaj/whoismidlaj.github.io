@@ -19,12 +19,12 @@
                     </NuxtLink>
                     <NuxtLink @click="handleClick" :class="{'active': $route.path === '/projects'}" class="menuItem" to="/projects">Projects 
                         <div class="icon w-6">
-                            <Icon name="heroicons:briefcase" class="w-6 h-6" />
+                            <Icon name="heroicons:beaker" class="w-6 h-6" />
                         </div>
                     </NuxtLink>
                     <NuxtLink @click="handleClick" :class="{'active': $route.path === '/uses'}" class="menuItem" to="/uses">Uses 
                         <div class="icon w-6">
-                            <Icon name="heroicons:cpu-chip" class="w-6 h-6" />
+                            <Icon name="heroicons:wrench-screwdriver" class="w-6 h-6" />
                         </div>
                     </NuxtLink>
                     <NuxtLink @click="handleClick" :class="{'active': $route.path === '/fediverse'}" class="menuItem" to="/fediverse">Fediverse 

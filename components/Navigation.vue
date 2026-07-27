@@ -72,12 +72,12 @@ const setTheme = (theme) => {
         <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
                   to="/projects" aria-label="Projects"
                   :class="activeIndex === 2 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
-          <Icon name="heroicons:briefcase" class="w-5 h-5" />
+          <Icon name="heroicons:beaker" class="w-5 h-5" />
         </NuxtLink>
         <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
                   to="/uses" aria-label="Uses"
                   :class="activeIndex === 3 ? 'text-[var(--accent-color)] font-semibold' : 'text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white'">
-          <Icon name="heroicons:cpu-chip" class="w-5 h-5" />
+          <Icon name="heroicons:wrench-screwdriver" class="w-5 h-5" />
         </NuxtLink>
         <NuxtLink class="relative z-10 flex items-center justify-center w-12 h-9 rounded-full transition-colors duration-300"
                   to="/fediverse" aria-label="Fediverse"
