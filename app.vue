@@ -1,6 +1,5 @@
 <template>
-  <Preloader v-show="isLoading" />
-  <div v-show="!isLoading" class="min-h-screen">
+  <div class="min-h-screen">
     <div v-show="colorMode.preference === 'matrix'" class="fixed top-0 left-0 -z-10 w-full h-full opacity-30">
       <MatrixRain />
     </div>
@@ -25,10 +24,4 @@
 
 <script setup lang="ts">
 const colorMode = useColorMode();
-
-const isLoading = ref(true);
-
-onMounted(() => {
-  isLoading.value = false;
-});
 </script>
