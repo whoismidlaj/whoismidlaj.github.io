@@ -298,6 +298,16 @@
         </div>
       </section>
 
+      <!-- References / Inspiration -->
+      <section class="mt-8 pt-8 border-t border-[var(--border-color)]">
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+          Inspired by similar pages by 
+          <a href="https://andersnoren.se/gear/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent-color)] hover:underline">Anders Norén</a> 
+          and 
+          <a href="https://daleanthony.com/uses/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent-color)] hover:underline">Dale Anthony</a>.
+        </p>
+      </section>
+
     </div>
   </div>
 </template>
