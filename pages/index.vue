@@ -63,9 +63,8 @@ import { useColorMode } from '#imports'
 import profilePic from '~/assets/img/profile-pic.webp'
 import profilePicBlack from '~/assets/img/profile-pic-black.webp'
 
-const colorMode = useColorMode()
 const profilePicSrc = computed(() => {
-  return colorMode.preference === 'matrix' ? profilePicBlack : profilePic
+  return profilePic
 })
 
 useSeoMeta({

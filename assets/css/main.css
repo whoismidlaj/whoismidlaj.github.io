@@ -197,7 +197,7 @@
 
 
     .ProfileContainer {
-      @apply w-28 h-28 mb-8 rounded-full overflow-hidden flex items-center justify-center transition-all duration-300;
+      @apply w-24 h-24 mb-8 rounded-full overflow-hidden flex items-center justify-center transition-all duration-300;
       background-color: var(--button-bg) !important;
       border: 2px solid var(--accent-color) !important;
     }
@@ -209,10 +209,6 @@
 
     .Profile {
       @apply w-full h-full object-cover;
-    }
-
-    .dark .Profile {
-      filter: invert(0.92) brightness(0.95) !important;
     }
 
     .TopBarProfileContainer {
@@ -228,10 +224,6 @@
 
     .TopBarProfile {
       @apply w-full h-full object-cover;
-    }
-
-    .dark .TopBarProfile {
-      filter: invert(0.92) brightness(0.95) !important;
     }
 
     .theme-toggle-btn {
@@ -576,11 +568,7 @@
 
     .matrix .ProfileContainer, .matrix .TopBarProfileContainer {
       border: 2px solid #00FF41 !important;
-      background-color: #00FF41 !important;
-    }
-
-    .matrix .Profile, .matrix .TopBarProfile {
-      filter: sepia(100%) hue-rotate(70deg) saturate(300%) contrast(1.2) !important;
+      background-color: transparent !important;
     }
 
   }
